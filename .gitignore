@@ -544,3 +544,10 @@ game/*/save/
 /game/mod_ep2/materials/
 /game/mod_lostcoast/materials/
 /src/materialsystem/stdshaders/shaders/fxc/*.vcs
+
+# Linux build outputs from src/buildallprojects
+/src/_vpc_/
+/src/compile_commands.json
+/src/.ninja_deps
+/src/.ninja_log
+/src/lib/public/linux64/*.a

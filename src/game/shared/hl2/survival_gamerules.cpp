@@ -207,7 +207,8 @@ void CHalfLife2Survival::ParseSurvivalSettings( KeyValues *pSubKey )
 		}
 		else if ( !stricmp( pTestKey->GetName(), "spawnhealth" ) )
 		{
-			m_SurvivalSettings.m_iSpawnHealth = pTestKey->GetInt( NULL, 100 );
+			// GCC: NULL picks the key-symbol overload; this wants the node's own value.
+			m_SurvivalSettings.m_iSpawnHealth = pTestKey->GetInt( (const char *)NULL, 100 );
 		}
 		else if ( !stricmp( pTestKey->GetName(), "allowedpickups" ) )
 		{
