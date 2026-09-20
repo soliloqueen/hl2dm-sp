@@ -5,10 +5,10 @@ Source SDK 2013 game code for the singleplayer campaigns, built as mods that run
 ## Build instructions
 
 Requirements:
- - Half-Life 2: Deathmatch installed via Steam (the engine, shared shaders and UI content)
+ - Half-Life 2: Deathmatch installed via Steam.
  
 Optionally (for the example mods):
- - Half-Life 2, Episode One, Episode Two and Lost Coast installed (the campaign content)
+ - Half-Life 2 Complete installed. I think Lost Coast too, I can't remember if it's merged by now.
 
 ### Windows
 
