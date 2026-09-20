@@ -1,3 +1,7 @@
+// Steam Cloud keeps one cfg/config.cfg slot per app, so the mod would write over the
+// engine app's cloud copy. Must come before stuffcmds, or +quit can exit first.
+cl_cloud_settings 0
+
 // Stuff the command line: the engine queues "exec valve.rc" at startup and nothing
 // else runs stuffcmds, so +commands like +map would otherwise never execute.
 stuffcmds
