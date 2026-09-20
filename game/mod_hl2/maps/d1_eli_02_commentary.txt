@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_275_character_lighting"
+		"origin" "-476.799987793 784.3200073242 -2641.6201171875"
+		"angles" "0 -15.1199998856 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_275_character_lighting.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_277_facial_technology"
+		"origin" "-405.2699890137 803.6400146484 -2637.7299804688"
+		"angles" "0 62.6800003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_277_facial_technology.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_278_eye_shader"
+		"origin" "-545.5900268555 569.2199707031 -2640.0200195313"
+		"angles" "0 -109.6900024414 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_278_eye_shader.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_024_moving_the_gravity_gun"
+		"origin" "-690.0100097656 188.8500061035 -2512.7800292969"
+		"angles" "0 -134.5500030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_024_moving_the_gravity_gun.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ted Backman"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_280_risk"
+		"origin" "-1377.7199707031 623.799987793 -2635.3701171875"
+		"angles" "0 -1.0900000334 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_280_risk.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+}

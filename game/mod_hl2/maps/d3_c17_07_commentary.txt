@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_249_triangle_plaza"
+		"origin" "6216.08984375 1530.2600097656 49.4799995422"
+		"angles" "0 1.9199999571 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_249_triangle_plaza.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ido Magal"
+		"synopsis" ""
+	}
+}

@@ -17,6 +17,7 @@
 #include "mathlib/mathlib.h"
 #include "engine/IEngineSound.h"
 #include "saverestoretypes.h"
+#include "physics_saverestore.h"
 #include "saverestore_utlvector.h"
 #include "model_types.h"
 #include "igamesystem.h"
@@ -615,7 +616,22 @@ void CSave::WriteInterval( const interval_t *value, int count )
 
 //-------------------------------------
 
-bool CSave::ShouldSaveField( const void *pData, typedescription_t *pField )
+// A field whose declared size disagrees with its FIELD_ type writes the wrong number of
+// bytes and corrupts everything after it; the warning names the field, class and sizes.
+static void WarnWrongFieldSize( const char *pClassName, const typedescription_t *pField, int nActualBytes )
+{
+	Warning( "WARNING! Field %s is using the wrong FIELD_ type!\n"
+			 "  datadesc class: %s, %d byte(s) in the class, %d byte(s) for FIELD_ type %d\n"
+			 "Fix this or you'll see a crash.\n",
+			 pField->fieldName, ( pClassName && pClassName[0] ) ? pClassName : "(unknown)",
+			 nActualBytes, pField->fieldSize * gSizes[pField->fieldType], (int)pField->fieldType );
+
+	Assert( 0 );
+}
+
+//-------------------------------------
+
+bool CSave::ShouldSaveField( const void *pData, typedescription_t *pField, const char *pClassName )
 {
 	if ( !(pField->flags & FTYPEDESC_SAVE) || pField->fieldType == FIELD_VOID )
 		return false;
@@ -653,7 +669,7 @@ bool CSave::ShouldSaveField( const void *pData, typedescription_t *pField )
 			
 				for ( ; pTestField < pLimit; ++pTestField )
 				{
-					if ( ShouldSaveField( pTestData + pTestField->fieldOffset[ TD_OFFSET_NORMAL ], pTestField ) )
+					if ( ShouldSaveField( pTestData + pTestField->fieldOffset[ TD_OFFSET_NORMAL ], pTestField, pField->td->dataClassName ) )
 						return true;
 				}
 
@@ -680,8 +696,7 @@ bool CSave::ShouldSaveField( const void *pData, typedescription_t *pField )
 		{
 			if ( (pField->fieldSizeInBytes != pField->fieldSize * gSizes[pField->fieldType]) )
 			{
-				Warning("WARNING! Field %s is using the wrong FIELD_ type!\nFix this or you'll see a crash.\n", pField->fieldName );
-				Assert( 0 );
+				WarnWrongFieldSize( pClassName, pField, pField->fieldSizeInBytes );
 			}
 
 			int *pEHandle = (int *)pData;
@@ -697,8 +712,7 @@ bool CSave::ShouldSaveField( const void *pData, typedescription_t *pField )
 		{
 			if ( (pField->fieldSizeInBytes != pField->fieldSize * gSizes[pField->fieldType]) )
 			{
-				Warning("WARNING! Field %s is using the wrong FIELD_ type!\nFix this or you'll see a crash.\n", pField->fieldName );
-				Assert( 0 );
+				WarnWrongFieldSize( pClassName, pField, pField->fieldSizeInBytes );
 			}
 
 			// old byte-by-byte null check
@@ -842,7 +856,7 @@ int CSave::WriteFields( const char *pname, const void *pBaseData, datamap_t *pRo
 		pTest = &pFields[ i ];
 		void *pOutputData = ( (char *)pBaseData + pTest->fieldOffset[ TD_OFFSET_NORMAL ] );
 			
-		if ( !ShouldSaveField( pOutputData, pTest ) )
+		if ( !ShouldSaveField( pOutputData, pTest, pRootMap ? pRootMap->dataClassName : NULL ) )
 			continue;
 
 		if ( !WriteField( pname, pOutputData, pRootMap, pTest ) )
@@ -1541,6 +1555,14 @@ bool CRestore::ShouldEmptyField( typedescription_t *pField )
 
 void CRestore::EmptyFields( void *pBaseData, typedescription_t *pFields, int fieldCount )
 {
+	// IRestore entry point - no datadesc name to report here.
+	EmptyFieldsWithClass( pBaseData, pFields, fieldCount, NULL );
+}
+
+//-------------------------------------
+
+void CRestore::EmptyFieldsWithClass( void *pBaseData, typedescription_t *pFields, int fieldCount, const char *pClassName )
+{
 	int i;
 	for ( i = 0; i < fieldCount; i++ )
 	{
@@ -1572,7 +1594,7 @@ void CRestore::EmptyFields( void *pBaseData, typedescription_t *pFields, int fie
 				char *pFieldMemory = (char *)( ( !(pField->flags & FTYPEDESC_PTR) ) ? pFieldData : *((void **)pFieldData) );
 				while ( --nFieldCount >= 0 )
 				{
-					EmptyFields( pFieldMemory, pField->td->dataDesc, pField->td->dataNumFields );
+					EmptyFieldsWithClass( pFieldMemory, pField->td->dataDesc, pField->td->dataNumFields, pField->td->dataClassName );
 					pFieldMemory += pField->fieldSizeInBytes;
 				}
 			}
@@ -1583,8 +1605,7 @@ void CRestore::EmptyFields( void *pBaseData, typedescription_t *pFields, int fie
 			// the wrong field type for your field
 			if ( pField->fieldSizeInBytes != pField->fieldSize * gSizes[pField->fieldType] )
 			{
-				Warning("WARNING! Field %s is using the wrong FIELD_ type!\nFix this or you'll see a crash.\n", pField->fieldName );
-				Assert( 0 );
+				WarnWrongFieldSize( pClassName, pField, pField->fieldSizeInBytes );
 			}
 			memset( pFieldData, (pField->fieldType != FIELD_EHANDLE) ? 0 : 0xFF, pField->fieldSize * gSizes[pField->fieldType] );
 			break;
@@ -1648,7 +1669,7 @@ int CRestore::ReadFields( const char *pname, void *pBaseData, datamap_t *pRootMa
 	lastName = symName;
 
 	// Clear out base data
-	EmptyFields( pBaseData, pFields, fieldCount );
+	EmptyFieldsWithClass( pBaseData, pFields, fieldCount, pRootMap ? pRootMap->dataClassName : NULL );
 	
 	// Skip over the struct name
 	int i;
@@ -1773,7 +1794,16 @@ int CRestore::ReadShort( short *pValue, int nElems, int nBytesAvailable )
 
 int CRestore::ReadInt( int *pValue, int nElems, int nBytesAvailable )
 {
-	return ReadSimple( pValue, nElems, nBytesAvailable );
+	int nRead = ReadSimple( pValue, nElems, nBytesAvailable );
+
+	// Let the physics manager put the upper half of a truncated x64 pointer back:
+	// vphysics reads the pointers it saved through this call.
+	if ( nRead > 0 )
+	{
+		PhysicsSaveRestoreRepairIntRead( pValue, nRead );
+	}
+
+	return nRead;
 }
 
 //-------------------------------------

@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_060_buggy_removal"
+		"origin" "4833.4501953125 -459.1600036621 964.0700073242"
+		"angles" "0 -78.4199981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_060_buggy_removal.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Miles Estes"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_038_dropship_deployment"
+		"origin" "4744.2900390625 548.9000244141 972.8400268555"
+		"angles" "0 -151.8999938965 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_038_dropship_deployment.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Doug Wood"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_040_performance_constraints"
+		"origin" "5473.419921875 516.3300170898 969.3400268555"
+		"angles" "0 -48.1699981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_040_performance_constraints.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_041_lighthouse_gunship"
+		"origin" "8268.580078125 1575.8299560547 1909.2399902344"
+		"angles" "0 -81.7799987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_041_lighthouse_gunship.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ido Magal"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_066_buggy_theft"
+		"origin" "7916.6801757813 1828.4899902344 839.0800170898"
+		"angles" "0 -127.5400009155 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_066_buggy_theft.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Scott Dalton"
+		"synopsis" ""
+	}
+}

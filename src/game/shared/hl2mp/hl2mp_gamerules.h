@@ -106,6 +106,9 @@ public:
 	virtual int WeaponShouldRespawn( CBaseCombatWeapon *pWeapon );
 	virtual void Think( void );
 	virtual void CreateStandardEntities( void );
+#if !defined( CLIENT_DLL )
+	virtual void InitDefaultAIRelationships( void );
+#endif
 	virtual void ClientSettingsChanged( CBasePlayer *pPlayer );
 	virtual int PlayerRelationship( CBaseEntity *pPlayer, CBaseEntity *pTarget );
 	virtual void GoToIntermission( void );

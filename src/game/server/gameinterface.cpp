@@ -1013,6 +1013,35 @@ bool CServerGameDLL::LevelInit( const char *pMapName, char const *pMapEntities, 
 		if ( pOldLevel )
 		{
 			engine->LoadAdjacentEnts( pOldLevel, pLandmarkName );
+
+			// A transition never goes through CBasePlayer::Restore(), so re-apply the
+			// restored view angles here, as a plain load does.
+			CBasePlayer *pPlayer = UTIL_GetLocalPlayer();
+			if ( pPlayer )
+			{
+				// Let the client know this level was entered by a transition, so it
+				// re-applies the view it retained from the previous level.
+				pPlayer->m_bLevelTransition = true;
+
+				if ( pPlayer->IsAlive() )
+				{
+					QAngle viewAngles = pPlayer->pl.v_angle;
+					viewAngles.z = 0;	// Clear out roll
+
+					DevMsg( 2, "Transition: re-applying the player's restored view angles (%.1f %.1f %.1f)\n",
+							viewAngles.x, viewAngles.y, viewAngles.z );
+
+					pPlayer->SetLocalAngles( viewAngles );
+					pPlayer->SnapEyeAngles( viewAngles );
+				}
+			}
+		}
+		else
+		{
+			// A plain load carries its own view angles; the client must leave them alone.
+			CBasePlayer *pPlayer = UTIL_GetLocalPlayer();
+			if ( pPlayer )
+				pPlayer->m_bLevelTransition = false;
 		}
 
 		if ( g_OneWayTransition )

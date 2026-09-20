@@ -1,0 +1,25 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_103_smokestack_collapse"
+		"origin" "-1012.450012207 5109.6499023438 -399.3299865723"
+		"angles" "0 -122.8000030518 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_103_smokestack_collapse.mp3"
+		"viewtarget" "cn_103_smokestack_collapse_target"
+		"viewposition" ""
+		"prevent_movement" 1
+		"speakers" "Doug Wood"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cn_103_smokestack_collapse_target"
+		"origin" "-789.8800048828 3733.6298828125 -290.4200134277"
+		"angles" "0 -85.2600021362 0"
+	}
+}

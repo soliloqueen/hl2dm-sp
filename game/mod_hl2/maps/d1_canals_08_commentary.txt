@@ -1,0 +1,77 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_271_3d_skybox"
+		"origin" "-41.5299987793 -125.5999984741 -537.8699951172"
+		"angles" "0 -25.8799991608 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_271_3d_skybox.mp3"
+		"viewtarget" "tgt_271_3d_skybox"
+		"viewposition" "cam_271_3d_skybox"
+		"prevent_movement" 1
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_101_357_intro"
+		"origin" "-794.3699951172 -583.4600219727 -523.3699951172"
+		"angles" "0 -101.5400009155 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_101_357_intro.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_283_vmpi"
+		"origin" "-82.1999969482 -1195.6500244141 -526.4000244141"
+		"angles" "0 7.4299998283 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_283_vmpi.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_100_mounted_gun"
+		"origin" "-192.8600006104 -3752.6499023438 -192.3000030518"
+		"angles" "0 -131.3699951172 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_100_mounted_gun.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cam_271_3d_skybox"
+		"origin" "1023.0100097656 -2927.8701171875 -220.3699951172"
+		"angles" "0 152.9600067139 0"
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "tgt_271_3d_skybox"
+		"origin" "205.4799957275 -2518.3601074219 -167.1300048828"
+		"angles" "0 150.2100067139 0"
+	}
+}

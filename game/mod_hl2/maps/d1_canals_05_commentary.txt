@@ -1,0 +1,108 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_267_rendering_systems"
+		"origin" "3389.25 6353.009765625 -369.3699951172"
+		"angles" "0 -68.3899993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_267_rendering_systems.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_270_gpu_wild_west"
+		"origin" "4128.9501953125 3819.5900878906 -426.9200134277"
+		"angles" "0 -120.4800033569 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_270_gpu_wild_west.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_268_dynamic_shadows"
+		"origin" "4160.7202148438 3022.6000976563 -419.8599853516"
+		"angles" "0 -129.7400054932 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_268_dynamic_shadows.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_091_headcrab_canisters"
+		"origin" "4293.9799804688 1335.3399658203 -398.5199890137"
+		"angles" "0 -24.6200008392 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_091_headcrab_canisters.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_092_airboat_intro"
+		"origin" "7119.7299804688 1609.7299804688 -407.0599975586"
+		"angles" "0 34.6300010681 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_092_airboat_intro.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_269_combinatorial_shader_explosion"
+		"origin" "7346.6499023438 1618.0699462891 -398.700012207"
+		"angles" "0 30.4200000763 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_269_combinatorial_shader_explosion.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_090_fighting_motion_sickness"
+		"origin" "195.6399993896 -875.2800292969 -310.8699951172"
+		"angles" "0 -86.8799972534 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_090_fighting_motion_sickness.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+}

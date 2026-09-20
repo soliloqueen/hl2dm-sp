@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_170_citadel_steep_landing"
+		"origin" "6400.4599609375 4301.83984375 -254.7400054932"
+		"angles" "0 90.0699996948 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_170_citadel_steep_landing.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Randy Lundeen"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_169_citadel_entrance"
+		"origin" "6976.8701171875 4783.5297851563 -1554.7800292969"
+		"angles" "0 -84.7699966431 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_169_citadel_entrance.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_172_lightmap_pass"
+		"origin" "9045.169921875 3134.8898925781 -1421.4200439453"
+		"angles" "0 -79.8000030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_172_lightmap_pass.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+}

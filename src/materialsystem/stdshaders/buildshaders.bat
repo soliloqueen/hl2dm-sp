@@ -124,7 +124,10 @@ echo Building for %SHVER%...
 
 set DYNAMIC=
 if "%dynamic_shaders%" == "1" set DYNAMIC=-Dynamic
-powershell -NoLogo -ExecutionPolicy Bypass -Command "%SrcDirBase%\devtools\bin\process_shaders.ps1 %DYNAMIC% -Version %SHVER% '%inputbase%.txt'"
+REM NOTE: the script path has to be quoted and invoked with the call operator, or
+REM PowerShell reads the first space in %SrcDirBase% as the end of the command and
+REM the build fails whenever the SDK lives under a path with a space in it.
+powershell -NoLogo -ExecutionPolicy Bypass -Command "& '%SrcDirBase%\devtools\bin\process_shaders.ps1' %DYNAMIC% -Version %SHVER% '%inputbase%.txt'"
 
 REM ****************
 REM PC Shader copy

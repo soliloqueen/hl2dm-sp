@@ -602,6 +602,7 @@ CBasePlayer::CBasePlayer( )
 	m_hZoomOwner = NULL;
 
 	m_bPendingClientSettings = false;
+	m_bLevelTransition = false;
 	m_nUpdateRate = 20;  // cl_updaterate defualt
 	m_fLerpTime = 0.1f; // cl_interp default
 	m_bPredictWeapons = true;
@@ -8130,6 +8131,8 @@ void CMovementSpeedMod::InputSpeedMod(inputdata_t &data)
 		SendPropArray3		( SENDINFO_ARRAY3(m_iAmmo), SendPropInt( SENDINFO_ARRAY(m_iAmmo), -1, SPROP_VARINT | SPROP_UNSIGNED ) ),
 			
 		SendPropInt			( SENDINFO( m_fOnTarget ), 2, SPROP_UNSIGNED ),
+
+		SendPropInt			( SENDINFO( m_bLevelTransition ), 1, SPROP_UNSIGNED ),
 
 		SendPropInt			( SENDINFO( m_nTickBase ), -1, SPROP_CHANGES_OFTEN ),
 		SendPropInt			( SENDINFO( m_nNextThinkTick ) ),

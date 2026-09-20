@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_202_d2_prison_05_start"
+		"origin" "471.2399902344 1090.6999511719 434.549987793"
+		"angles" "0 125.9899978638 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_202_d2_prison_05_start.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Yahn Bernier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_204_laundry"
+		"origin" "-237.3099975586 1641 432.0899963379"
+		"angles" "0 -84.2399978638 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_204_laundry.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_205_side_zombie"
+		"origin" "-802.950012207 920.4000244141 433.549987793"
+		"angles" "0 -7.1900000572 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_205_side_zombie.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Quintin Doroquez"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_199_kitchen"
+		"origin" "-1718.3000488281 -852.8800048828 565.5900268555"
+		"angles" "0 158.1100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_199_kitchen.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_194_one_way_drops"
+		"origin" "-2318.75 533.75 817.9400024414"
+		"angles" "0 49.9300003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_194_one_way_drops.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jakob Jungels"
+		"synopsis" ""
+	}
+}

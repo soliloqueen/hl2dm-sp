@@ -1,0 +1,47 @@
+"GameInfo"
+{
+	game		"Half-Life 2 (SDK)"
+	title		"HALF+LIFE'"
+	type		singleplayer_only
+
+	FileSystem
+	{
+		// Runs on the HL2DM engine (app 320); HL2 content (app 220) and the engine's own
+		// install (320) are mounted by app id, and the mod directory wins over both.
+		SteamAppId				320
+
+		SearchPaths
+		{
+			game+mod			|gameinfo_path|custom/*
+
+			// The mod's own directory is the first "mod" search path (after any user
+			// customizations). This is also the one used when writing to "mod".
+			game+mod+mod_write+default_write_path		|gameinfo_path|.
+			gamebin				|gameinfo_path|bin
+
+			// The engine's own HL2 assets first: its shader cache matches this engine
+			// build, and the install's anniversary cache would otherwise win.
+			game				|appid_320|hl2/hl2_misc_dir.vpk
+
+			// Half-Life 2 content (app 220)
+			game				|appid_220|hl2/hl2_textures_dir.vpk
+			game				|appid_220|hl2/hl2_sound_vo_english_dir.vpk
+			game				|appid_220|hl2/hl2_sound_misc_dir.vpk
+			game				|appid_220|hl2/hl2_misc_dir.vpk
+			game				|appid_220|hl2/hl2_pak_dir.vpk
+			game				|appid_220|hl2_complete/hl2_complete_misc_dir.vpk
+			platform			|appid_220|platform/platform_misc_dir.vpk
+
+			// Campaign maps ship loose in the install directory, so the loose directories
+			// are mounted too.
+			game				|appid_220|hl2
+			game				|appid_220|hl2_complete
+			platform			|appid_220|platform
+
+			// Not mounted: hl2mp_pak_dir.vpk would put the deathmatch option pages
+			// (optionssubadvanced/optionssubmultiplayer.res) into the SP menus.
+
+			game+download		|gameinfo_path|download
+		}
+	}
+}

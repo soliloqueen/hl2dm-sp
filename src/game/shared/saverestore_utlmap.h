@@ -18,6 +18,11 @@ template <class UTLMAP, int KEY_TYPE, int FIELD_TYPE>
 class CUtlMapDataOps : public CDefSaveRestoreOps
 {
 public:
+	// Declare the *member* size: a string_t is eight bytes on x64, and a four byte
+	// declaration makes EmptyFields() write past the key.
+	static const int nKeySize = sizeof( ((typename UTLMAP::Node_t *)0)->key );
+	static const int nElemSize = sizeof( ((typename UTLMAP::Node_t *)0)->elem );
+
 	CUtlMapDataOps()
 	{
 		UTLCLASS_SAVERESTORE_VALIDATE_TYPE( KEY_TYPE );
@@ -40,7 +45,7 @@ public:
 				NULL, 
 				NULL,
 				pKeyDatamap,
-				sizeof(KEY_TYPE),
+				nKeySize,
 			},
 			
 			{
@@ -53,7 +58,7 @@ public:
 				NULL, 
 				NULL,
 				pFieldDatamap,
-				sizeof(FIELD_TYPE),
+				nElemSize,
 			}
 		};
 		
@@ -106,7 +111,7 @@ public:
 				NULL, 
 				NULL,
 				pKeyDatamap,
-				sizeof(KEY_TYPE),
+				nKeySize,
 			},
 			
 			{
@@ -119,7 +124,7 @@ public:
 				NULL, 
 				NULL,
 				pFieldDatamap,
-				sizeof(FIELD_TYPE),
+				nElemSize,
 			}
 		};
 		

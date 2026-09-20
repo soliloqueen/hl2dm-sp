@@ -47,6 +47,10 @@ public:
 
 extern IPhysSaveRestoreManager *g_pPhysSaveRestoreManager;
 
+// Called by CRestore::ReadInt() for every int read from the stream; the physics
+// block handler puts the saved upper half back on vphysics's truncated x64 pointers.
+bool PhysicsSaveRestoreRepairIntRead( int *pValue, int nElems );
+
 //=============================================================================
 
 #endif // PHYSICS_SAVERESTORE_H

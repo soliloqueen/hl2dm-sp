@@ -101,6 +101,10 @@ private:
 };
 
 
+// Initialises the default AI relationship table for any game running HL2's SP NPCs.
+void HL2_InitDefaultAIRelationships( void );
+
+
 //-----------------------------------------------------------------------------
 // Gets us at the Half-Life 2 game rules
 //-----------------------------------------------------------------------------

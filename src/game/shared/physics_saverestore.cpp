@@ -23,10 +23,22 @@
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
+// Log every pointer the repair table puts back together (the summary prints either
+// way). Replicated because this file is compiled into both the client and server.
+static ConVar phys_saverestore_repair_log( "phys_saverestore_repair_log", "0", FCVAR_REPLICATED, "Log each x64 physics pointer read repaired by the physics save/restore repair table." );
+
 //-----------------------------------------------------------------------------
 
-static short PHYS_SAVE_RESTORE_VERSION = 5;
+// Version 6 made the block header raw and version 7 added the repair table; older
+// blocks are rejected (see ReadRestoreHeaders()).
+static short PHYS_SAVE_RESTORE_VERSION = 7;
 
+// Upper bound on the repair table, so a damaged save cannot loop over a nonsense
+// count; m_RepairLookup is int-indexed and can represent all of them.
+#define MAX_PHYS_POINTER_REPAIRS	( 1 << 18 )
+
+// Written and read raw at pointer width: a data description would truncate the
+// pointer on x64 or restore it as an entity. See ReadRestoreHeaders().
 struct PhysBlockHeader_t
 {
 	int				nSaved;
@@ -37,14 +49,16 @@ struct PhysBlockHeader_t
 		nSaved = 0;
 		pWorldObject = 0;
 	}
-
-	DECLARE_SIMPLE_DATADESC();
 };
-BEGIN_SIMPLE_DATADESC( PhysBlockHeader_t )
-	DEFINE_FIELD( nSaved,	FIELD_INTEGER ),
-	// NOTE: We want to save the actual address here for remapping, so use an integer
-	DEFINE_FIELD( pWorldObject, FIELD_INTEGER ),	
-END_DATADESC()
+
+// A (low32, high32) pair for a pointer vphysics saved through its 32 bit path.
+// Entries whose low half is shared by two live pointers are never written out.
+struct PhysPointerRepair_t
+{
+	unsigned int	m_nLow;
+	unsigned int	m_nHigh;
+	bool			m_bAmbiguous;
+};
 
 #if defined(_STATIC_LINKED) && defined(CLIENT_DLL)
 const char *g_ppszPhysTypeNames[PIID_NUM_TYPES] =
@@ -130,6 +144,10 @@ public:
 		SetDefLessFunc( m_PhysObjectModels );
 		SetDefLessFunc( m_PhysObjectCustomModels );
 		SetDefLessFunc( m_PhysCollideBBoxModels );
+		SetDefLessFunc( m_RepairLookup );
+
+		m_nActivePhysObjectRestores = 0;
+		m_nRepairedReads = 0;
 	}
 
 	const char *GetBlockName()
@@ -137,11 +155,56 @@ public:
 		return "Physics";
 	}
 
+	// vphysics writes pointers through the 32 bit path, losing their upper half on x64;
+	// Save() records them and this puts that half back. Returns true when repaired.
+	bool TryRepairIntRead( int *pValue, int nElems )
+	{
+#if defined(PLATFORM_64BITS)
+		// Only a single element read, into an aligned pointer sized slot, made
+		// while vphysics itself is restoring, can be one of its pointers.
+		if ( nElems != 1 || m_nActivePhysObjectRestores <= 0 )
+			return false;
+
+		if ( ( (uintp)pValue & ( sizeof( void * ) - 1 ) ) != 0 )
+			return false;
+
+		if ( m_RepairLookup.Count() == 0 )
+			return false;
+
+		unsigned int nLow = (unsigned int)(uintp)*pValue;
+
+		int iLookup = m_RepairLookup.Find( nLow );
+		if ( iLookup == m_RepairLookup.InvalidIndex() )
+			return false;
+
+		int iEntry = m_RepairLookup[iLookup];
+		if ( iEntry < 0 )
+			return false;	// ambiguous low half, leave it alone
+
+		// pValue points at the low 32 bits of the slot vphysics read into.
+		unsigned int nHigh = m_RepairEntries[iEntry].m_nHigh;
+		*(uintp *)pValue = ( (uintp)nHigh << 32 ) | (uintp)nLow;
+		++m_nRepairedReads;
+
+		if ( phys_saverestore_repair_log.GetBool() )
+		{
+			Msg( "Physics save/restore: repaired a pointer read, low 0x%08X high 0x%08X\n", nLow, nHigh );
+		}
+
+		return true;
+#else
+		UNREFERENCED_PARAMETER( pValue );
+		UNREFERENCED_PARAMETER( nElems );
+		return false;
+#endif
+	}
+
 	//---------------------------------
 
 	virtual void PreSave( CSaveRestoreData * ) 
 	{
 		m_blockHeader.Clear();
+		ClearPhysPointerRepairs();
 	}
 	
 	//---------------------------------
@@ -150,6 +213,11 @@ public:
 	{
 		m_blockHeader.pWorldObject = g_PhysWorldObject;
 		m_blockHeader.nSaved = m_QueuedSaves.Count();
+
+		// The world object belongs in the repair table too; write the table before
+		// any object data.
+		NotePhysPointerForRepair( g_PhysWorldObject );
+		WritePhysPointerRepairTable( pSave );
 
 		while ( m_QueuedSaves.Count() )
 		{
@@ -185,7 +253,11 @@ public:
 	virtual void WriteSaveHeaders( ISave *pSave )
 	{
 		pSave->WriteShort( &PHYS_SAVE_RESTORE_VERSION );
-		pSave->WriteAll( &m_blockHeader );
+
+		// Written raw: WriteAll() would go through a data description and
+		// truncate the pointer. See PhysBlockHeader_t.
+		pSave->WriteData( (const char *)&m_blockHeader.nSaved, sizeof( m_blockHeader.nSaved ) );
+		pSave->WriteData( (const char *)&m_blockHeader.pWorldObject, sizeof( m_blockHeader.pWorldObject ) );
 	}
 	
 	//---------------------------------
@@ -216,43 +288,54 @@ public:
 
 	virtual void ReadRestoreHeaders( IRestore *pRestore )
 	{
-		// No reason why any future version shouldn't try to retain backward compatability. The default here is to not do so.
+		// A version mismatch rejects the load: a skipped block would leave physics
+		// fields the entity pass has already cleared.
 		short version = pRestore->ReadShort();
-		m_fDoLoad = ( version == PHYS_SAVE_RESTORE_VERSION );
+		if ( version != PHYS_SAVE_RESTORE_VERSION )
+		{
+			Error( "Physics save data is version %d, but this build writes and reads version %d. "
+				   "The save was written by an incompatible build and cannot be loaded safely.\n",
+				   (int)version, (int)PHYS_SAVE_RESTORE_VERSION );
+		}
 
-		pRestore->ReadAll( &m_blockHeader );
+		// Raw, pointer width header - see WriteSaveHeaders().
+		pRestore->ReadData( (char *)&m_blockHeader.nSaved, sizeof( m_blockHeader.nSaved ), sizeof( m_blockHeader.nSaved ) );
+		pRestore->ReadData( (char *)&m_blockHeader.pWorldObject, sizeof( m_blockHeader.pWorldObject ), sizeof( m_blockHeader.pWorldObject ) );
 	}
 
 	//---------------------------------
 	
 	virtual void Restore( IRestore *pRestore, bool ) 
 	{
-		if ( m_fDoLoad )
+		// Read the repair table first: vphysics needs it in place before it
+		// reads any of the pointers it saved.
+		ReadPhysPointerRepairTable( pRestore );
+
+		if ( physenv )
 		{
-			if ( physenv )
-			{
-				physprerestoreparams_t params;
-				params.recreatedObjectCount = 1;
-				params.recreatedObjectList[0].pNewObject = g_PhysWorldObject;
-				params.recreatedObjectList[0].pOldObject = m_blockHeader.pWorldObject;
-				physenv->PreRestore( params );
-			}
-
-			PhysObjectHeader_t header;
-
-			while ( m_blockHeader.nSaved-- )
-			{
-				pRestore->ReadAll( &header );
-				pRestore->StartBlock();
-				
-				if ( header.hEntity != NULL )
-				{
-					RestoreBlock( pRestore, header );
-				}
-
-				pRestore->EndBlock();
-			}
+			physprerestoreparams_t params;
+			params.recreatedObjectCount = 1;
+			params.recreatedObjectList[0].pNewObject = g_PhysWorldObject;
+			params.recreatedObjectList[0].pOldObject = m_blockHeader.pWorldObject;
+			physenv->PreRestore( params );
 		}
+
+		PhysObjectHeader_t header;
+
+		while ( m_blockHeader.nSaved-- )
+		{
+			pRestore->ReadAll( &header );
+			pRestore->StartBlock();
+			
+			if ( header.hEntity != NULL )
+			{
+				RestoreBlock( pRestore, header );
+			}
+
+			pRestore->EndBlock();
+		}
+
+		Msg( "Physics save/restore: %d pointer(s) in the repair table, %d int read(s) repaired\n", m_RepairLookup.Count(), m_nRepairedReads );
 	}
 	
 	//---------------------------------
@@ -412,6 +495,7 @@ public:
 #if !defined( CLIENT_DLL )
 		gEntList.RemoveListenerEntity( this );
 #endif
+		ClearPhysPointerRepairs();
 	}
 	
 	//---------------------------------
@@ -438,6 +522,16 @@ public:
 		item.header.modelName = NULL_STRING;
 		memset( &item.header.bbox, 0, sizeof( item.header.bbox ) );
 		item.header.sphere.radius = 0;
+
+		if ( !fOnlyNotingExistence )
+		{
+			// Every pointer handed to vphysics can come back through a 32 bit
+			// read, arrays included.
+			for ( int i = 0; i < pTypeDesc->fieldSize; ++i )
+			{
+				NotePhysPointerForRepair( ppPhysObj[i] );
+			}
+		}
 		
 		if ( !fOnlyNotingExistence && type == PIID_IPHYSICSOBJECT )
 		{
@@ -515,7 +609,12 @@ public:
 		if ( physenv )
 		{
 			physrestoreparams_t params = { pRestore, ppObject, header.type, header.hEntity.Get(), STRING(header.modelName), pCollide, physenv, physgametrace };
+
+			// vphysics reads the pointers it saved through pRestore while this
+			// call is on the stack; only those reads may be repaired.
+			++m_nActivePhysObjectRestores;
 			physenv->Restore( params );
+			--m_nActivePhysObjectRestores;
 		}
 	}
 #if !defined( CLIENT_DLL )	
@@ -671,7 +770,6 @@ private:
 
 	CUtlPriorityQueue<QueuedItem_t> 			m_QueuedSaves;
 	CUtlMap<CBaseEntity *, CEntityRestoreSet *>	m_QueuedRestores;
-	bool 										m_fDoLoad;
 
 	//---------------------------------
 	
@@ -682,6 +780,132 @@ private:
 	//---------------------------------
 	
 	PhysBlockHeader_t							m_blockHeader;
+
+	//---------------------------------
+	// x64 pointer repair - see TryRepairIntRead()
+
+	void ClearPhysPointerRepairs()
+	{
+		m_RepairEntries.RemoveAll();
+		m_RepairLookup.RemoveAll();
+		m_nActivePhysObjectRestores = 0;
+		m_nRepairedReads = 0;
+	}
+
+	void NotePhysPointerForRepair( const void *pPointer )
+	{
+#if defined(PLATFORM_64BITS)
+		if ( !pPointer )
+			return;
+
+		uintp nPointer = (uintp)pPointer;
+		unsigned int nLow = (unsigned int)nPointer;
+		unsigned int nHigh = (unsigned int)( nPointer >> 32 );
+
+		int iLookup = m_RepairLookup.Find( nLow );
+		if ( iLookup == m_RepairLookup.InvalidIndex() )
+		{
+			PhysPointerRepair_t entry;
+			entry.m_nLow = nLow;
+			entry.m_nHigh = nHigh;
+			entry.m_bAmbiguous = false;
+			m_RepairLookup.Insert( nLow, m_RepairEntries.AddToTail( entry ) );
+			return;
+		}
+
+		int iEntry = m_RepairLookup[iLookup];
+		if ( iEntry < 0 )
+			return;	// already ambiguous
+
+		if ( m_RepairEntries[iEntry].m_nHigh != nHigh )
+		{
+			// Two live pointers share a low half and disagree about the upper
+			// half: repairing either of them would be a guess, so refuse both.
+			m_RepairEntries[iEntry].m_bAmbiguous = true;
+			m_RepairLookup[iLookup] = -1;
+		}
+#else
+		UNREFERENCED_PARAMETER( pPointer );
+#endif
+	}
+
+	void WritePhysPointerRepairTable( ISave *pSave )
+	{
+		int nAmbiguous = 0;
+		for ( int i = 0; i < m_RepairEntries.Count(); ++i )
+		{
+			if ( m_RepairEntries[i].m_bAmbiguous )
+				++nAmbiguous;
+		}
+
+		int nWritten = m_RepairEntries.Count() - nAmbiguous;
+		pSave->WriteInt( &nWritten );
+
+		for ( int i = 0; i < m_RepairEntries.Count(); ++i )
+		{
+			if ( m_RepairEntries[i].m_bAmbiguous )
+				continue;
+
+			int nLow = (int)m_RepairEntries[i].m_nLow;
+			int nHigh = (int)m_RepairEntries[i].m_nHigh;
+			pSave->WriteInt( &nLow );
+			pSave->WriteInt( &nHigh );
+		}
+
+		DevMsg( "Physics save/restore: %d pointer(s) in the repair table (%d refused as ambiguous)\n", nWritten, nAmbiguous );
+	}
+
+	void ReadPhysPointerRepairTable( IRestore *pRestore )
+	{
+		int nEntries = 0;
+		pRestore->ReadInt( &nEntries );
+
+		// An impossible count means a corrupt block; reject the load.
+		if ( nEntries < 0 || nEntries > MAX_PHYS_POINTER_REPAIRS )
+		{
+			Error( "Physics save data is corrupt: the repair table claims %d entries (maximum %d). "
+				   "The save cannot be loaded safely.\n", nEntries, (int)MAX_PHYS_POINTER_REPAIRS );
+		}
+
+		for ( int i = 0; i < nEntries; ++i )
+		{
+			int nLow = 0;
+			int nHigh = 0;
+			pRestore->ReadInt( &nLow );
+			pRestore->ReadInt( &nHigh );
+			AddPhysPointerRepair( (unsigned int)nLow, (unsigned int)nHigh );
+		}
+	}
+
+	void AddPhysPointerRepair( unsigned int nLow, unsigned int nHigh )
+	{
+		int iLookup = m_RepairLookup.Find( nLow );
+		if ( iLookup == m_RepairLookup.InvalidIndex() )
+		{
+			PhysPointerRepair_t entry;
+			entry.m_nLow = nLow;
+			entry.m_nHigh = nHigh;
+			entry.m_bAmbiguous = false;
+			m_RepairLookup.Insert( nLow, m_RepairEntries.AddToTail( entry ) );
+			return;
+		}
+
+		int iEntry = m_RepairLookup[iLookup];
+		if ( iEntry < 0 )
+			return;	// already ambiguous
+
+		if ( m_RepairEntries[iEntry].m_nHigh != nHigh )
+		{
+			// A damaged table; refuse to repair this low half.
+			m_RepairEntries[iEntry].m_bAmbiguous = true;
+			m_RepairLookup[iLookup] = -1;
+		}
+	}
+
+	CUtlVector<PhysPointerRepair_t>				m_RepairEntries;
+	CUtlMap<unsigned int, int, int>				m_RepairLookup;
+	int											m_nActivePhysObjectRestores;
+	int											m_nRepairedReads;
 };
 
 //-----------------------------------------------------------------------------
@@ -695,6 +919,14 @@ IPhysSaveRestoreManager *g_pPhysSaveRestoreManager = &g_PhysSaveRestoreBlockHand
 ISaveRestoreBlockHandler *GetPhysSaveRestoreBlockHandler()
 {
 	return &g_PhysSaveRestoreBlockHandler;
+}
+
+// Called by CRestore::ReadInt() for every int read from the stream; only reads
+// vphysics makes while restoring its own objects are repaired.
+
+bool PhysicsSaveRestoreRepairIntRead( int *pValue, int nElems )
+{
+	return g_PhysSaveRestoreBlockHandler.TryRepairIntRead( pValue, nElems );
 }
 
 static bool IsValidEntityPointer( void *ptr )

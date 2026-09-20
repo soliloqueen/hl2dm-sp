@@ -1,0 +1,228 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_157_kleiners_lab"
+		"origin" "-5908.8798828125 -822.6400146484 111.2900009155"
+		"angles" "0 161.7200012207 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_157_kleiners_lab.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_142_choreography"
+		"origin" "-6297.7202148438 -853.4299926758 30.4300003052"
+		"angles" "0 160.1000061035 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_142_choreography.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Fletcher"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_161_faceposer"
+		"origin" "-6567.33984375 -980.4199829102 37.5900001526"
+		"angles" "0 -142.6399993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_161_faceposer.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Yahn Bernier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_162_choreo_commands"
+		"origin" "-6515.5400390625 -1163.0500488281 44.5699996948"
+		"angles" "0 -127.2200012207 0"
+		"precommands" "scene_showlook 1;scene_showmoveto 1;scene_showfaceto 1"
+		"postcommands" "scene_showlook 0;scene_showmoveto 0;scene_showfaceto 0"
+		"commentaryfile" "#commentary\cn_162_choreo_commands.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Yahn Bernier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_152_lab_interactivity"
+		"origin" "-6370.5698242188 -1189.9799804688 56.9099998474"
+		"angles" "0 -1.9900000095 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_152_lab_interactivity.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_144_delivery"
+		"origin" "-6474.5498046875 -1335.6099853516 43.9300003052"
+		"angles" "0 -36.5800018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_144_delivery.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_159_writing"
+		"origin" "-6562.9599609375 -1521.7399902344 38.8199996948"
+		"angles" "0 -96.5899963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_159_writing.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_141_character_reactions"
+		"origin" "-6823.7797851563 -1485.5500488281 43.8300018311"
+		"angles" "0 -124.1600036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_141_character_reactions.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ariel Diaz"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_160_animation"
+		"origin" "-6988.8198242188 -1529.1199951172 40.8699989319"
+		"angles" "0 -131.1499938965 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_160_animation.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Miles Estes"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_148_tone"
+		"origin" "-7004.419921875 -1319.5600585938 44.3100013733"
+		"angles" "0 161.3600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_148_tone.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_147_archetypes"
+		"origin" "-6789.919921875 -1284.0899658203 51.4599990845"
+		"angles" "0 123.2399978638 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_147_archetypes.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_149_voice-actors"
+		"origin" "-6521.259765625 -1587.0999755859 45.3400001526"
+		"angles" "0 -129.7599945068 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_149_voice-actors.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_155_monitors"
+		"origin" "-7266.7998046875 -1346.7800292969 70.7699966431"
+		"angles" "0 161.5700073242 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_155_monitors.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ido Magal"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_145_alyxs_kiss"
+		"origin" "-7263.5400390625 -1253.7399902344 41.9399986267"
+		"angles" "0 151.9299926758 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_145_alyxs_kiss.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_156_scene_interactivity"
+		"origin" "-7104.5200195313 -1236.4399414063 39.5"
+		"angles" "0 55.8400001526 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_156_scene_interactivity.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+}

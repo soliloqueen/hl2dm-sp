@@ -1,0 +1,93 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_260_displacements_1"
+		"origin" "9350.169921875 7860.3198242188 -903.7399902344"
+		"angles" "0 -154.1399993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_260_displacements_1.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_104_washing_machine_puzzle"
+		"origin" "9084.4599609375 8023.9399414063 -910.5999755859"
+		"angles" "0 150.8600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_104_washing_machine_puzzle.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_261_displacements_2"
+		"origin" "10018.3701171875 7773.1899414063 -658.8900146484"
+		"angles" "0 84.5599975586 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_261_displacements_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_262_displacements_3"
+		"origin" "9616.009765625 8110.830078125 -538.2199707031"
+		"angles" "0 -127.8199996948 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_262_displacements_3.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_153_gestures"
+		"origin" "6350 5400 -850.7800292969"
+		"angles" "0 62.6800003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_153_gestures.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Doug Wood"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_105_airboat_changeup"
+		"origin" "5706.7700195313 4920.25 -905.3699951172"
+		"angles" "0 117.3499984741 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_105_airboat_changeup.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+}

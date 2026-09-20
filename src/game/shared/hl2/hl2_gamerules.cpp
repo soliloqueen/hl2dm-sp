@@ -349,12 +349,17 @@ ConVar  alyx_darkness_force( "alyx_darkness_force", "0", FCVAR_CHEAT | FCVAR_REP
 		g_pBodyQueueHead = (CCorpse *)pHead->GetOwnerEntity();
 	}
 
+	void CHalfLife2::InitDefaultAIRelationships( void )
+	{
+		HL2_InitDefaultAIRelationships();
+	}
+
 	//------------------------------------------------------------------------------
-	// Purpose : Initialize all default class relationships
+	// Purpose : Initialize the default AI relationships for any game running HL2's SP NPCs.
 	// Input   :
 	// Output  :
 	//------------------------------------------------------------------------------
-	void CHalfLife2::InitDefaultAIRelationships( void )
+	void HL2_InitDefaultAIRelationships( void )
 	{
 		int i, j;
 

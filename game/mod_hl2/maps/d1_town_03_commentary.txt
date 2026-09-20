@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_276_gamma_correction"
+		"origin" "-3390.4899902344 -1060.9799804688 -3556.9699707031"
+		"angles" "0 -42.8100013733 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_276_gamma_correction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_214_town_arenas"
+		"origin" "-2308.7199707031 -1065.75 -3614.3999023438"
+		"angles" "0 12.3000001907 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_214_town_arenas.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dario Casali"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_237_playtester_archetypes"
+		"origin" "-1327.4799804688 -1324.0699462891 -3405.8798828125"
+		"angles" "0 110.4199981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_237_playtester_archetypes.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Tom Leonard"
+		"synopsis" ""
+	}
+}

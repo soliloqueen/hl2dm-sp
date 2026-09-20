@@ -1,0 +1,63 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_222_fast_zombie_introduction"
+		"origin" "-1410.9399414063 757.2100219727 -3411.1201171875"
+		"angles" "0 -156.7899932861 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_222_fast_zombie_introduction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Randy Lundeen"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_220_physics_object_consistency"
+		"origin" "-1845.5300292969 730.450012207 -3391.6201171875"
+		"angles" "0 99.6299972534 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_220_physics_object_consistency.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_217_poison_zombie_introduction"
+		"origin" "-2989.759766 913.944214 -3088.592041"
+		"angles" "0 -134.7200012207 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_217_poison_zombie_introduction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_218_final_arena"
+		"origin" "-4198.009765625 1252.1099853516 -2964.4499511719"
+		"angles" "0 -102.5599975586 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_218_final_arena.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+}

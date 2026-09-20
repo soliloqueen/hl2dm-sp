@@ -1,0 +1,63 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_048_rollermines"
+		"origin" "2936.6298828125 -9995.8701171875 1473.2800292969"
+		"angles" "0 132.6100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_048_rollermines.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_035_ambush"
+		"origin" "-5678.6801757813 -11354.98046875 899.6300048828"
+		"angles" "0 123.5 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_035_ambush.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_047_crossbow"
+		"origin" "-3661.2600097656 -4103.41015625 1348.8800048828"
+		"angles" "0 110.8300018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_047_crossbow.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Cook"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_045_gas_station"
+		"origin" "-3912.8898925781 166.7799987793 1137.0300292969"
+		"angles" "0 -38.1899986267 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_045_gas_station.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+}

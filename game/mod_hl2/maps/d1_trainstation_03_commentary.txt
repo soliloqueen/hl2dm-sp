@@ -1,0 +1,127 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_137_materials_and_shaders"
+		"origin" "-4963.2900390625 -4705.4501953125 45.6300010681"
+		"angles" "0 -33.7700004578 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_137_materials_and_shaders.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_264_cubemaps"
+		"origin" "-4821.669921875 -4657.9501953125 295.1099853516"
+		"angles" "0 -48.3899993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_264_cubemaps.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Chris Green"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_284_field_of_view"
+		"origin" "-4693.7299804688 -4942.990234375 299.2200012207"
+		"angles" "0 179.8300018311 0"
+		"precommands" "fov_desired 90"
+		"postcommands" "fov_desired 75"
+		"commentaryfile" "#commentary\cn_284_field_of_view.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_285_reference_maps"
+		"origin" "-4394.8798828125 -4958.9799804688 299.2900085449"
+		"angles" "0 -86.5599975586 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_285_reference_maps.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Randy Lundeen"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_272_missing_material"
+		"origin" "-4146.259765625 -4940.0600585938 299.0199890137"
+		"angles" "0 -88.9800033569 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_272_missing_material.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_136_the_raid"
+		"origin" "-3659.8400878906 -4595.2900390625 299.5400085449"
+		"angles" "0 10.4799995422 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_136_the_raid.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_138_the_raid_2"
+		"origin" "-3711.6499023438 -4615.2202148438 427.0199890137"
+		"angles" "0 166.6399993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_138_the_raid_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Miles Estes"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"id" "7"
+		"classname" "prop_dynamic"
+		"angles" "0 0 0"
+		"fademindist" "-1"
+		"fadescale" "1"
+		"MaxAnimTime" "10"
+		"MinAnimTime" "5"
+		"model" "models/perftest/grass_tuft_001.mdl"
+		"modelscale" "1.0"
+		"renderamt" "255"
+		"rendercolor" "255 255 255"
+		"skin" "0"
+		"solid" "6"
+		"targetname" "cn_272_missing_material_prop"
+		"origin" "-4105 -4939.5971679688 267.2887268066"
+		"angles" "0 0 0"
+	}
+}

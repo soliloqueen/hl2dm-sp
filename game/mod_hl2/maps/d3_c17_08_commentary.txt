@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_247_manhack_tunnels"
+		"origin" "-1528.4499511719 -2638.5600585938 166.1000061035"
+		"angles" "0 96.3099975586 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_247_manhack_tunnels.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+}

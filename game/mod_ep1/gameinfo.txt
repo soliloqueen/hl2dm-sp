@@ -1,0 +1,54 @@
+"GameInfo"
+{
+	game		"Half-Life 2 (SDK)"
+	title		"HALF+LIFE'"
+	title2		"== episode one =="
+	type		singleplayer_only
+
+	FileSystem
+	{
+		// Runs on the HL2DM engine (app 320) with Episode One content (app 380, loose
+		// campaign maps); EP1 and EP2 stay separate folders because their content differs.
+		SteamAppId				320
+
+		SearchPaths
+		{
+			game+mod			|gameinfo_path|custom/*
+
+			game+mod+mod_write+default_write_path		|gameinfo_path|.
+			// Both episodes share one game binary, so EP2 mounts mod_ep1's bin, as the
+			// retail install does with episodic/bin.
+			gamebin				|gameinfo_path|bin
+
+			// Episode One content first, so its Alyx (sequences and gestures HL2's model
+			// lacks) wins; neither episode pak carries a shader cache.
+			game				|appid_380|episodic/ep1_pak_dir.vpk
+			game				|appid_380|episodic
+
+			// The engine's own HL2 assets first: its shader cache matches this engine
+			// build, and the install's anniversary cache would otherwise win.
+			game				|appid_320|hl2/hl2_misc_dir.vpk
+
+
+			// Half-Life 2 content (app 220)
+			game				|appid_220|hl2/hl2_textures_dir.vpk
+			game				|appid_220|hl2/hl2_sound_vo_english_dir.vpk
+			game				|appid_220|hl2/hl2_sound_misc_dir.vpk
+			game				|appid_220|hl2/hl2_misc_dir.vpk
+			game				|appid_220|hl2/hl2_pak_dir.vpk
+			game				|appid_220|hl2_complete/hl2_complete_misc_dir.vpk
+			platform			|appid_220|platform/platform_misc_dir.vpk
+
+			// Campaign maps ship loose in the install directory, so the loose directories
+			// are mounted too.
+			game				|appid_220|hl2
+			game				|appid_220|hl2_complete
+			platform			|appid_220|platform
+
+			// Not mounted: hl2mp_pak_dir.vpk would put the deathmatch option pages
+			// (optionssubadvanced/optionssubmultiplayer.res) into the SP menus.
+
+			game+download		|gameinfo_path|download
+		}
+	}
+}

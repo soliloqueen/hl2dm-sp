@@ -1,0 +1,213 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_118_welcome"
+		"origin" "-5410.009765625 -1856.1300048828 60.4500007629"
+		"angles" "0 -2.9300000668 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_118_welcome.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gabe Newell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_116_physics_objects"
+		"origin" "-5299.5600585938 -1967.8399658203 55.4900016785"
+		"angles" "0 -22.9899997711 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_116_physics_objects.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_115_trainstation"
+		"origin" "-4881.6499023438 -1981.0699462891 17.9599990845"
+		"angles" "0 -5.4400000572 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_115_trainstation.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_119_metrocop_shoving_citizens"
+		"origin" "-4169.3798828125 -1932.0799560547 10"
+		"angles" "0 55.1500015259 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_119_metrocop_shoving_citizens.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_121_sweeping_vortigaunt"
+		"origin" "-4134.7998046875 -2441.7800292969 10"
+		"angles" "0 -88.6600036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_121_sweeping_vortigaunt.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Laura Dubuk"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_150_citizens"
+		"origin" "-3948.1899414063 -1362.8399658203 10"
+		"angles" "0 -32.0900001526 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_150_citizens.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_114_natural_storytelling"
+		"origin" "-5025.1000976563 -1227.5100097656 10"
+		"angles" "0 178.7700042725 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_114_natural_storytelling.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_274_early_tech_planning"
+		"origin" "-4349.419921875 -675.7700195313 11.6800003052"
+		"angles" "0 2.9400000572 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_274_early_tech_planning.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_146_storytelling"
+		"origin" "-4779.9799804688 -932.299987793 10.3599996567"
+		"angles" "0 -47.3699989319 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_146_storytelling.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_158_characters"
+		"origin" "-3565.2900390625 -536.3499755859 6.9400000572"
+		"angles" "0 -43.3100013733 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_158_characters.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_113_blocking_tutorials"
+		"origin" "-3372.3100585938 -62.9900016785 15"
+		"angles" "0 117.4499969482 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_113_blocking_tutorials.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Adrian Finol"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_122_blocking_tutorials_2"
+		"origin" "-3508.1799316406 62.7099990845 15"
+		"angles" "0 69.8700027466 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_122_blocking_tutorials_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Robin Walker"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_117_blocking_tutorials_3"
+		"origin" "-3288.0200195313 46.5200004578 126.5400009155"
+		"angles" "0 -17.4500007629 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_117_blocking_tutorials_3.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_120_fall_damage"
+		"origin" "-3145.4899902344 67.0299987793 -20.5799999237"
+		"angles" "0 -44.3800010681 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_120_fall_damage.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+}

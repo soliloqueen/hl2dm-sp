@@ -892,6 +892,7 @@ public:
 	int						m_afButtonForced;	// These are forced onto the player's inputs
 
 	CNetworkVar( bool, m_fOnTarget );		//Is the crosshair on a target?
+	CNetworkVar( bool, m_bLevelTransition );	//This level was entered through a level transition.
 
 	char					m_szAnimExtension[32];
 

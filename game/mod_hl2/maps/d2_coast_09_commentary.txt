@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_052_28_transitions_later"
+		"origin" "-12023.0703125 7322.1298828125 558.5599975586"
+		"angles" "0 -51.6100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_052_28_transitions_later.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_003_ramming_zombies_with_the_buggy"
+		"origin" "-11512.3203125 7411.1298828125 560.950012207"
+		"angles" "0 -28.9500007629 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_003_ramming_zombies_with_the_buggy.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_043_flashlight_power"
+		"origin" "-11618.259765625 7044.5 567.2800292969"
+		"angles" "0 -53.8699989319 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_043_flashlight_power.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_165_d2_coast_09"
+		"origin" "-481.9100036621 -6690.2900390625 -707.25"
+		"angles" "0 12.6800003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_165_d2_coast_09.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Aaron Seeler"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_064_battery_finding"
+		"origin" "10765.0595703125 8336.48046875 -144.0700073242"
+		"angles" "0 -14.7100000381 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_064_battery_finding.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Robin Walker"
+		"synopsis" ""
+	}
+}

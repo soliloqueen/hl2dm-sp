@@ -1,0 +1,108 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_143_phoneme_extraction"
+		"origin" "-9698.1796875 -3433.6101074219 379.2799987793"
+		"angles" "0 -75.3300018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_143_phoneme_extraction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Fletcher"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_022_hands_free"
+		"origin" "-9260.3798828125 -3354.1899414063 363.0899963379"
+		"angles" "0 -6.8000001907 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_022_hands_free.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Wright"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_007_dynamic_mixing"
+		"origin" "-8234.3701171875 -3140.330078125 240.0200042725"
+		"angles" "0 18.2000007629 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_007_dynamic_mixing.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_011_bullet_audio"
+		"origin" "-8455.5400390625 -3017.669921875 19.3799991608"
+		"angles" "0 -164.3699951172 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_011_bullet_audio.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_287_audio_caching"
+		"origin" "-8742.759765625 -2967.3999023438 41.2099990845"
+		"angles" "0 179.7599945068 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_287_audiocaching.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Yahn Bernier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_001_physics_sound"
+		"origin" "-8195.4599609375 -2171.8000488281 50.9300003052"
+		"angles" "0 84.6100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_001_physics_sound.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_006_automating_dsp"
+		"origin" "-7961.5200195313 -726.1699829102 -78.1999969482"
+		"angles" "0 65.8000030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_006_automating_dsp.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+}

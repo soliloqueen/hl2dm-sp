@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_252_bank_roof_mortar"
+		"origin" "558.7899780273 5356.4399414063 1013.6300048828"
+		"angles" "0 -159.1199951172 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_252_bank_roof_mortar.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+	}
+}

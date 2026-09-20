@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_084_physics_in_puzzles"
+		"origin" "2890 -2430 -671.549987793"
+		"angles" "0 -165.2899932861 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_084_physics_in_puzzles.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_085_combine_attack_helicopter"
+		"origin" "2293.1398925781 -556.0800170898 -579.6500244141"
+		"angles" "0 176.1999969482 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_085_combine_attack_helicopter.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_008_soundscapes"
+		"origin" "-71.3399963379 1442.8900146484 -721.5800170898"
+		"angles" "0 152.3500061035 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_008_soundscapes.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_211_autosave_dangerous"
+		"origin" "-529.5 -539.3400268555 -723.4299926758"
+		"angles" "0 143.8800048828 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_211_autosave_dangerous.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_266_normal_maps"
+		"origin" "-104.3099975586 -1292.2399902344 -765.6900024414"
+		"angles" "0 142.0299987793 0"
+		"precommands" "mat_fullbright 2"
+		"postcommands" "mat_fullbright 0"
+		"commentaryfile" "#commentary\cn_266_normal_maps.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+}

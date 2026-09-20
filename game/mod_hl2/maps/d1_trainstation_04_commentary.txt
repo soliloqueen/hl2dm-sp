@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_139_health_and_no_hud"
+		"origin" "-3999.7600097656 -3427.080078125 615.3599853516"
+		"angles" "0 154.7400054932 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_139_health_and_no_hud.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_140_playtesting_anecdote_2"
+		"origin" "-7001.1899414063 -4079.9799804688 568.6300048828"
+		"angles" "0 118.8399963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_140_playtesting_anecdote_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jakob Jungels"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_151_alyx"
+		"origin" "-7616.6801757813 -3911.6201171875 425.1300048828"
+		"angles" "0 137.2299957275 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_151_alyx.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_195_npcs_on_elevators"
+		"origin" "-7694.7099609375 -3919.2199707031 -217.0500030518"
+		"angles" "0 14.8999996185 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_195_npcs_on_elevators.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_154_interactive_storytelling"
+		"origin" "-7667.2099609375 -4184.5297851563 -224.7899932861"
+		"angles" "0 -148.0200042725 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_154_interactive_storytelling.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Erik Johnson"
+		"synopsis" ""
+	}
+}

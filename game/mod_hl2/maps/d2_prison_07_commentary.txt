@@ -1,0 +1,63 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_201_mossmans_betrayal"
+		"origin" "-252.3699951172 -3207.6899414063 -115.8799972534"
+		"angles" "0 -29.3500003815 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_201_mossmans_betrayal.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_190_turret_training_exit"
+		"origin" "1221.9100341797 -3323.3000488281 -248.0500030518"
+		"angles" "0 58.3199996948 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_190_turret_training_exit.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Doug Wood"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_193_final_turret_arena"
+		"origin" "3909.3601074219 -3649.6298828125 -493.1199951172"
+		"angles" "0 -40.25 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_193_final_turret_arena.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Erik Johnson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_185_allied_turrets_balancing"
+		"origin" "4021.6599121094 -4022.8798828125 -492.7600097656"
+		"angles" "0 -89.75 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_185_allied_turrets_balancing.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Adrian Finol"
+		"synopsis" ""
+	}
+}

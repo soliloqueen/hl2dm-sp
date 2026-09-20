@@ -1,0 +1,49 @@
+"GameInfo"
+{
+	game		"Half-Life 2: Lost Coast (SDK)"
+	title		"HALF+LIFE'"
+	title2		"lost coasT"
+	type		singleplayer_only
+
+	FileSystem
+	{
+		// Runs on the HL2DM engine (app 320) with Lost Coast content (app 340) mounted by
+		// app id; the map d2_lostcoast ships loose in that install's lostcoast/maps.
+		SteamAppId				320
+
+		SearchPaths
+		{
+			game+mod			|gameinfo_path|custom/*
+
+			game+mod+mod_write+default_write_path		|gameinfo_path|.
+			gamebin				|gameinfo_path|bin
+
+			// Lost Coast's content first: its models and materials win over the HL2 base
+			// copies, and its pak carries no shader cache to affect the engine's.
+			game				|appid_340|lostcoast/lostcoast_pak_dir.vpk
+			game				|appid_340|lostcoast
+
+			// The engine's own HL2 assets first: its shader cache matches this engine
+			// build, and the install's anniversary cache would otherwise win.
+			game				|appid_320|hl2/hl2_misc_dir.vpk
+
+			// Half-Life 2 content (app 220)
+			game				|appid_220|hl2/hl2_textures_dir.vpk
+			game				|appid_220|hl2/hl2_sound_vo_english_dir.vpk
+			game				|appid_220|hl2/hl2_sound_misc_dir.vpk
+			game				|appid_220|hl2/hl2_misc_dir.vpk
+			game				|appid_220|hl2/hl2_pak_dir.vpk
+			game				|appid_220|hl2_complete/hl2_complete_misc_dir.vpk
+			platform			|appid_220|platform/platform_misc_dir.vpk
+
+			game				|appid_220|hl2
+			game				|appid_220|hl2_complete
+			platform			|appid_220|platform
+
+			// Not mounted: hl2mp_pak_dir.vpk would put the deathmatch option pages
+			// (optionssubadvanced/optionssubmultiplayer.res) into the SP menus.
+
+			game+download		|gameinfo_path|download
+		}
+	}
+}

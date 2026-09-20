@@ -281,7 +281,7 @@ struct AIScheduleState_t
 	TaskStatus_e		 fTaskStatus;
 	float				 timeStarted;
 	float				 timeCurTaskStarted;
-	AI_TaskFailureCode_t taskFailureCode;
+	int					 taskFailureCode;
 	int					 iTaskInterrupt;
 	bool 				 bTaskRanAutomovement;
 	bool 				 bTaskUpdatedYaw;

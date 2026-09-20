@@ -1,0 +1,108 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_111_airboat_wreckage"
+		"origin" "72.5500030518 4382.4301757813 -1361.6899414063"
+		"angles" "0 121.1699981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_111_airboat_wreckage.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_013_alyx_and_mossman"
+		"origin" "56.4399986267 2939.6298828125 -1222.6600341797"
+		"angles" "0 -78.7099990845 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_013_alyx_and_mossman.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Fletcher"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_016_elis_lab"
+		"origin" "372.2600097656 1957.9300537109 -2692.4499511719"
+		"angles" "0 115.3899993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_016_elis_lab.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_017_feel_free_to_look_around"
+		"origin" "674.7899780273 2057.7900390625 -2692.4499511719"
+		"angles" "0 -32.5800018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_017_feel_free_to_look_around.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_014_exposition_board"
+		"origin" "596.3699951172 2356.9499511719 -2692.4499511719"
+		"angles" "0 65.3000030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_014_exposition_board.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Danika Rogers"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_281_hugs_and_pickups"
+		"origin" "648.2600097656 2183.5300292969 -2692.4499511719"
+		"angles" "0 23.6299991608 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_281_hugs_and_pickups.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_021_mossman"
+		"origin" "-308.3299865723 2213.3601074219 -2692.4499511719"
+		"angles" "0 134.0099945068 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_021_mossman.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+}

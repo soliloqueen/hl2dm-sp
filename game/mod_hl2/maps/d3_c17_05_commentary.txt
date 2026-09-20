@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_251_assault_behavior"
+		"origin" "1417.2700195313 -5250.6801757813 157.1699981689"
+		"angles" "0 82.8600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_251_assault_behavior.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Cook"
+		"synopsis" ""
+	}
+}

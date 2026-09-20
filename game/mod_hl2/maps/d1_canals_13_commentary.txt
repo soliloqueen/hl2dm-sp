@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_109_helicopter_megabomb_origin"
+		"origin" "-4073.9599609375 -645.8800048828 -359.3200073242"
+		"angles" "0 29.1200008392 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_109_helicopter_megabomb_origin.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_112_arena_exit_gate"
+		"origin" "3168.3400878906 2628.2099609375 -147.9900054932"
+		"angles" "0 7.7399997711 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_112_arena_exit_gate.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Quintin Doroquez"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_110_helicopter_final_battle"
+		"origin" "3967.1899414063 -60.4700012207 221.5200042725"
+		"angles" "0 87.5299987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_110_helicopter_final_battle.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+}

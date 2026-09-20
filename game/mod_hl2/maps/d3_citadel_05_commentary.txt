@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_182_getting_in_the_pod"
+		"origin" "-284.6400146484 73.7699966431 -2956.6000976563"
+		"angles" "0 49.7900009155 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_182_getting_in_the_pod.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+}

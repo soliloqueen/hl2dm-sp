@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_215_mines"
+		"origin" "740.6500244141 -1343.5799560547 -3991.0900878906"
+		"angles" "0 93.2900009155 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_215_mines.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dario Casali"
+		"synopsis" ""
+	}
+}

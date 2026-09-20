@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_191_allied_antlions"
+		"origin" "-2826.1101074219 4059.7399902344 49.1899986267"
+		"angles" "0 75.9400024414 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_191_allied_antlions.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_208_ragdoll_vortigaunt"
+		"origin" "-4116.1201171875 4630.5297851563 52.2299995422"
+		"angles" "0 98.1600036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_208_ragdoll_vortigaunt.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Scott Dalton"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_192_laser_mines"
+		"origin" "-3548.0100097656 4793.169921875 169.6399993896"
+		"angles" "0 -45.6599998474 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_192_laser_mines.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Erik Johnson"
+		"synopsis" ""
+	}
+}

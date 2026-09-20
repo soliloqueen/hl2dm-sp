@@ -1,0 +1,93 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_061_d2_coast_04"
+		"origin" "-3218.7800292969 174.8399963379 38.1699981689"
+		"angles" "0 8.1999998093 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_061_d2_coast_04.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Randy Lundeen"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_009_audio_over_distance"
+		"origin" "-2716.3999023438 465.5400085449 42.9599990845"
+		"angles" "0 25.8799991608 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_009_audio_over_distance.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_056_buggy_tools"
+		"origin" "2455.6499023438 -1948.7800292969 295.2799987793"
+		"angles" "0 -129.2400054932 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_056_buggy_tools.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Wright"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_042_crane"
+		"origin" "4409.009765625 -1728.9699707031 303.0199890137"
+		"angles" "0 62.2400016785 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_042_crane.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jakob Jungels"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_002_ramming_with_the_buggy"
+		"origin" "5887.8901367188 -5463.1298828125 561.8400268555"
+		"angles" "0 -110.6500015259 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_002_ramming_with_the_buggy.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_028_opportunistic_moments"
+		"origin" "2444.5400390625 3202.0200195313 1074.9300537109"
+		"angles" "0 56.7400016785 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_028_opportunistic_moments.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ariel Diaz"
+		"synopsis" ""
+	}
+}

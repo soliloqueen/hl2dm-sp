@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_239_cities"
+		"origin" "3791.4499511719 -4605.2001953125 -217.4100036621"
+		"angles" "0 81.0199966431 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_239_cities.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+}

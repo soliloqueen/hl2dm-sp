@@ -1,0 +1,70 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_063_sniper_alley"
+		"origin" "-12142.490234375 4796.7001953125 949.0399780273"
+		"angles" "0 114.5500030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_063_sniper_alley.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Robin Walker"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_071_ragdoll_magnets"
+		"origin" "-10863.01953125 7134.1899414063 941.4899902344"
+		"angles" "0 72.1699981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_071_ragdoll_magnets.mp3"
+		"viewtarget" "tgt_cn_071_ragdoll_magnets"
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dario Casali"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "tgt_cn_071_ragdoll_magnets"
+		"origin" "-10974.509765625 7028.8701171875 1266.4699707031"
+		"angles" "0 158.7899932861 0"
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_067_snipers"
+		"origin" "-9099.759765625 7192.1499023438 946.299987793"
+		"angles" "0 8.0100002289 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_067_snipers.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ted Backman"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_050_coast_kickoff"
+		"origin" "-1386.4200439453 10667.599609375 943.950012207"
+		"angles" "0 -163.1999969482 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_050_coast_kickoff.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+}

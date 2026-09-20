@@ -1,0 +1,93 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_200_alyxs_tool"
+		"origin" "1183.0799560547 380.5199890137 -656.9899902344"
+		"angles" "0 81.6600036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_200_alyxs_tool.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Laura Dubuk"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_203_alyx_as_companion"
+		"origin" "1413.8800048828 749.1099853516 -661.6300048828"
+		"angles" "0 19.9500007629 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_203_alyx_as_companion.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Miles Estes"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_187_eli_in_pod_choreography"
+		"origin" "651.200012207 34.1199989319 47.2099990845"
+		"angles" "0 1.2000000477 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_187_eli_in_pod_choreography.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_198_vent"
+		"origin" "1178.7099609375 -1355.0899658203 30.4899997711"
+		"angles" "0 -89.3499984741 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_198_vent.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_196_looktargets"
+		"origin" "2011.4799804688 -2128.830078125 -170.1900024414"
+		"angles" "0 -86.8799972534 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_196_looktargets.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Cook"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_184_grenade_puzzle"
+		"origin" "1081.7099609375 -2986.8500976563 -196.2200012207"
+		"angles" "0 -169.8399963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_184_grenade_puzzle.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Aaron Seeler"
+		"synopsis" ""
+	}
+}

@@ -33,6 +33,7 @@
 	#include "voice_gamemgr.h"
 	#include "hl2mp_gameinterface.h"
 	#include "hl2mp_cvars.h"
+	#include "hl2_gamerules.h"
 
 extern void respawn(CBaseEntity *pEdict, bool fCopyCorpse);
 
@@ -225,6 +226,15 @@ CHL2MPRules::~CHL2MPRules( void )
 	g_Teams.Purge();
 #endif
 }
+
+#if !defined( CLIENT_DLL )
+// Purpose: CHL2MPRules' inherited relationship table is a no-op, so the first HL2 NPC
+// to ask for its default disposition crashed; initialize the table CHalfLife2 uses.
+void CHL2MPRules::InitDefaultAIRelationships( void )
+{
+	HL2_InitDefaultAIRelationships();
+}
+#endif
 
 void CHL2MPRules::CreateStandardEntities( void )
 {

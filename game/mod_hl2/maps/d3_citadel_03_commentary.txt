@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_176_weapon_strip"
+		"origin" "7766.5 -1176.5100097656 2158.9899902344"
+		"angles" "0 66.8300018311 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_176_weapon_strip.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_173_super_gravity_origins"
+		"origin" "7211.669921875 273.4100036621 2157.5500488281"
+		"angles" "0 177.9100036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_173_super_gravity_origins.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_178_dissolved_weapons"
+		"origin" "6312.8999023438 72.0999984741 2162.7900390625"
+		"angles" "0 1.0800000429 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_178_dissolved_weapons.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Quintin Doroquez"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_175_combine_wall_and_balls_training"
+		"origin" "3403.0600585938 105.8099975586 2416.5900878906"
+		"angles" "0 -84.7699966431 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_175_combine_wall_and_balls_training.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ido Magal"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_174_combine_energy"
+		"origin" "1698 -244.1900024414 2353.3200683594"
+		"angles" "0 146.0899963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_174_combine_energy.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+}

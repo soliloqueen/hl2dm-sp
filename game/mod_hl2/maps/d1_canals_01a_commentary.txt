@@ -1,0 +1,93 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_079_surface_properties"
+		"origin" "510.4899902344 5032.490234375 -23.1700000763"
+		"angles" "0 63.4300003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_079_surface_properties.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ariel Diaz"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_080_combat_entrances"
+		"origin" "-3124.9799804688 5520.3100585938 -31.3500003815"
+		"angles" "0 87.9499969482 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_080_combat_entrances.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dario Casalis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_081_mounted_gun_gallery"
+		"origin" "782.7600097656 5791.91015625 -39.5699996948"
+		"angles" "0 29.9699993134 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_081_mounted_gun_gallery.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_083_barnacle_introduction"
+		"origin" "893.0599975586 4129.9501953125 -39.5"
+		"angles" "0 58.0600013733 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_083_barnacle_introduction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_082_barnacle_bowling"
+		"origin" "-3014.2600097656 7905.91015625 37"
+		"angles" "0 162.0099945068 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_082_barnacle_bowling.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_263_particles"
+		"origin" "900.2100219727 3036.580078125 -20.5099983215"
+		"angles" "0 -26.3999996185 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_263_particles.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Chris Green"
+		"synopsis" ""
+	}
+}

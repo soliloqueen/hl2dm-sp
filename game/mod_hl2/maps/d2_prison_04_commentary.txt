@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_210_d2_prison_04"
+		"origin" "-823.8400268555 1593.2900390625 180.5200042725"
+		"angles" "0 101.7699966431 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_210_d2_prison_04.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+}

@@ -1,0 +1,213 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_004_buggy_sound_engine"
+		"origin" "-6768.1098632813 -11682.7001953125 1076.0100097656"
+		"angles" "0 61.4700012207 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_004_buggy_sound_engine.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_164_thumpers"
+		"origin" "-5145.1801757813 -6191.1401367188 540.7700195313"
+		"angles" "0 -158.5500030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_164_thumpers.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Adrian Finol"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_033_grenade_house"
+		"origin" "-3426.8701171875 -6096.7299804688 497.5299987793"
+		"angles" "0 112.1800003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_033_grenade_house.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_032_coast"
+		"origin" "-2999.9299316406 -6419.5200195313 554.0599975586"
+		"angles" "0 -4.6399998665 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_032_coast.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Chris Green"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_163_antlions"
+		"origin" "-4623.1401367188 -6087.4501953125 552.5100097656"
+		"angles" "0 37.3800010681 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_163_antlions.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_069_antlion_design"
+		"origin" "-5275.0200195313 3334.5700683594 341.8500061035"
+		"angles" "0 18.1900005341 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_069_antlion_design.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ted Backman"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_044_open_world_loot"
+		"origin" "-4057.5300292969 3777.9399414063 532.0300292969"
+		"angles" "0 63.4300003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_044_open_world_loot.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_025_buggy_birds"
+		"origin" "-3684.9599609375 3093.75 499.700012207"
+		"angles" "0 -36.4700012207 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_025_buggy_birds.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Adrian Finol"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_005_buggy_sound_design"
+		"origin" "-5399.3598632813 3976.0100097656 306.1300048828"
+		"angles" "0 102.2300033569 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_005_buggy_sound_design.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_065_boathouse"
+		"origin" "-147.6900024414 9859.1796875 305.2300109863"
+		"angles" "0 -1.6699999571 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_065_boathouse.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Scott Dalton"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_051_odessa_cubbage"
+		"origin" "8675.759765625 4243.5698242188 296.8699951172"
+		"angles" "0 -152.9199981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_051_odessa_cubbage.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_039_laser_guided_rpg"
+		"origin" "8429.73046875 4332.7900390625 297.5"
+		"angles" "0 169.6799926758 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_039_laser_guided_rpg.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_279_combine_gunship"
+		"origin" "7907.919921875 3863.6101074219 351.9599914551"
+		"angles" "0 171.4400024414 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_279_combine_gunship.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_010_flying_vehicle_audio"
+		"origin" "8127.5400390625 3593.4899902344 353.2900085449"
+		"angles" "0 -155.0399932861 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_010_flying_vehicle_audio.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kelly Bailey"
+		"synopsis" ""
+	}
+}

@@ -158,7 +158,7 @@ private:
 	void			BufferString( char *pdata, int len );
 
 	int				CountFieldsToSave( const void *pBaseData, typedescription_t *pFields, int fieldCount );
-	bool			ShouldSaveField( const void *pData, typedescription_t *pField );
+	bool			ShouldSaveField( const void *pData, typedescription_t *pField, const char *pClassName = NULL );
 
 	//---------------------------------
 	// Game info methods
@@ -203,6 +203,7 @@ public:
 	
 	int				ReadFields( const char *pname, void *pBaseData, datamap_t *pMap, typedescription_t *pFields, int fieldCount );
 	void 			EmptyFields( void *pBaseData, typedescription_t *pFields, int fieldCount );
+	void 			EmptyFieldsWithClass( void *pBaseData, typedescription_t *pFields, int fieldCount, const char *pClassName );
 
 	//---------------------------------
 	// Block support

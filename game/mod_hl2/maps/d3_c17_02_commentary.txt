@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_245_dog_combat"
+		"origin" "-8888.490234375 -6028.8198242188 -15.6599998474"
+		"angles" "0 -14.9600000381 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_245_dog_combat.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+}

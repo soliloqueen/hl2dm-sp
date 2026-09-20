@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_068_buggy_model"
+		"origin" "-7951.9799804688 -9046.4599609375 943.700012207"
+		"angles" "0 117.9899978638 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_068_buggy_model.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ted Backman"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_046_buggy_introduction"
+		"origin" "-7752.7001953125 -8725.0595703125 944.6199951172"
+		"angles" "0 91.8099975586 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_046_buggy_introduction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Cook"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_034_buggy_training_course"
+		"origin" "-9455.4296875 -8103.5 546.6799926758"
+		"angles" "0 69.4700012207 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_034_buggy_training_course.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_030_buggy_physics"
+		"origin" "-5786.580078125 -65.75 1057.4699707031"
+		"angles" "0 179.8899993896 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_030_buggy_physics.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_062_transition_tunnels"
+		"origin" "-12201.8798828125 1236.6899414063 1569.6500244141"
+		"angles" "0 99.9400024414 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_062_transition_tunnels.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Randy Lundeen"
+		"synopsis" ""
+	}
+}

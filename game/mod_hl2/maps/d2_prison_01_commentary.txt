@@ -1,0 +1,33 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_197_nova_prospekt_yard"
+		"origin" "1716.5899658203 -3825.4299316406 1331.1999511719"
+		"angles" "0 -81.9899978638 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_197_nova_prospekt_yard.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_207_magic_wall"
+		"origin" "1762.1899414063 -2015.3599853516 1584.5100097656"
+		"angles" "0 168.8699951172 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_207_magic_wall.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Robin Walker"
+		"synopsis" ""
+	}
+}

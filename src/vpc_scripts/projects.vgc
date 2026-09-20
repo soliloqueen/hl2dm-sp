@@ -17,6 +17,9 @@ $Project "client"
 {
 	"game\client\client_tf.vpc"			[$TF]
 	"game\client\client_hl2mp.vpc"		[$HL2MP]
+	"game\client\client_hl2.vpc"		[$HL2]
+	"game\client\client_episodic.vpc"	[$EPISODIC]
+	"game\client\client_lostcoast.vpc"	[$LOSTCOAST]
 }
 
 $Project "fgdlib"
@@ -28,6 +31,9 @@ $Project "game_shader_generic_example"
 {
 	"materialsystem\stdshaders\game_shader_generic_example_hl2mp.vpc" [$HL2MP]
 	"materialsystem\stdshaders\game_shader_generic_example_tf.vpc" [$TF]
+	"materialsystem\stdshaders\game_shader_generic_example_hl2.vpc" [$HL2]
+	"materialsystem\stdshaders\game_shader_generic_example_episodic.vpc" [$EPISODIC]
+	"materialsystem\stdshaders\game_shader_generic_example_lostcoast.vpc" [$LOSTCOAST]
 }
 
 // Use this project if you want to override all std shaders with your own.
@@ -52,6 +58,9 @@ $Project "server"
 {
 	"game\server\server_tf.vpc"			[$TF]
 	"game\server\server_hl2mp.vpc"		[$HL2MP]
+	"game\server\server_hl2.vpc"		[$HL2]
+	"game\server\server_episodic.vpc"	[$EPISODIC]
+	"game\server\server_lostcoast.vpc"	[$LOSTCOAST]
 }
 
 $Project "launcher_main"

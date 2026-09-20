@@ -92,6 +92,8 @@ public:
 #define FIELD_SIZE( _fieldType )	CDatamapFieldSizeDeducer<_fieldType>::SIZE
 #define FIELD_BITS( _fieldType )	(FIELD_SIZE( _fieldType ) * 8)
 
+// Member sizes for EmptyFields()/ShouldSaveField(); on x64 the pointer-shaped types
+// must be sizeof(intp) or only half of each one is cleared.
 DECLARE_FIELD_SIZE( FIELD_FLOAT,		sizeof(float) )
 DECLARE_FIELD_SIZE( FIELD_STRING,		sizeof(intp) )
 DECLARE_FIELD_SIZE( FIELD_VECTOR,		3 * sizeof(float) )
@@ -104,7 +106,7 @@ DECLARE_FIELD_SIZE( FIELD_CHARACTER,	sizeof(char))
 DECLARE_FIELD_SIZE( FIELD_COLOR32,		sizeof(int))
 DECLARE_FIELD_SIZE( FIELD_CLASSPTR,		sizeof(intp))
 DECLARE_FIELD_SIZE( FIELD_EHANDLE,		sizeof(int))
-DECLARE_FIELD_SIZE( FIELD_EDICT,		sizeof(int))
+DECLARE_FIELD_SIZE( FIELD_EDICT,		sizeof(intp))
 DECLARE_FIELD_SIZE( FIELD_POSITION_VECTOR, 	3 * sizeof(float))
 DECLARE_FIELD_SIZE( FIELD_TIME,			sizeof(float))
 DECLARE_FIELD_SIZE( FIELD_TICK,			sizeof(int))

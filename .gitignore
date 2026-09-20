@@ -502,3 +502,45 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+# Mod runtime state the engine writes on launch (not shipped)
+game/*/console.log
+game/*/gamestate.txt
+game/*/stats.txt
+game/*/voice_ban.dt
+game/*/demoheader.tmp
+game/*/textwindow_temp.html
+game/*/modelsounds.cache
+game/*/sound/
+game/*/sound_workshop/
+game/*/download/
+game/*/cfg/config.cfg
+game/*/cfg/server_blacklist.txt
+game/*/downloadlists/
+game/*/maps/graphs/
+game/*/materials/vgui/
+game/*/screenshots/
+game/*/save/
+
+# Goal-extension runtime state
+.pi/
+
+# Owner policy: the repository tracks only code and the mod skeleton files that are
+# strictly required to run a mod. The files below stay on disk but are not tracked:
+# documentation (README-Singleplayer.md), the two helper scripts under tools/, the SDK's
+# example map and example material in the single player mod folders (the campaigns' maps
+# come from the mounted content), and the compiled shader caches the shader projects emit.
+/README-Singleplayer.md
+/tools/
+/game/mod_hl2/maps/sdk_vehicles.bsp
+/game/mod_ep1/maps/sdk_vehicles.bsp
+/game/mod_ep2/maps/sdk_vehicles.bsp
+/game/mod_lostcoast/maps/sdk_vehicles.bsp
+/game/mod_hl2/maps/graphs/
+/game/mod_ep1/maps/graphs/
+/game/mod_ep2/maps/graphs/
+/game/mod_lostcoast/maps/graphs/
+/game/mod_hl2/materials/
+/game/mod_ep1/materials/
+/game/mod_ep2/materials/
+/game/mod_lostcoast/materials/
+/src/materialsystem/stdshaders/shaders/fxc/*.vcs

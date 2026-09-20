@@ -1,0 +1,93 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_053_finest_mind_of_his_generation"
+		"origin" "3228.9599609375 -7568.6499023438 1611.0799560547"
+		"angles" "0 81.4199981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_053_finest_mind_of_his_generation.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_027_floor_is_lava"
+		"origin" "2799.419921875 -1703.7600097656 727.950012207"
+		"angles" "0 89.6699981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_027_floor_is_lava.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Adrian Finol"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_049_sandtrap_thumper"
+		"origin" "3849.9099121094 4637.9799804688 504.5599975586"
+		"angles" "0 67.0100021362 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_049_sandtrap_thumper.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Laura Dubuk"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_037_vortigaunt_extraction"
+		"origin" "4563.7700195313 6787.919921875 627.3900146484"
+		"angles" "0 59.9700012207 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_037_vortigaunt_extraction.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_057_antlion_guard"
+		"origin" "5466.83984375 9972.150390625 206.4199981689"
+		"angles" "0 159.3000030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_057_antlion_guard.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Wright"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_036_bugbait_training"
+		"origin" "212.5800018311 11666.98046875 411.9200134277"
+		"angles" "0 152.5099945068 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_036_bugbait_training.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+}

@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_094_airboat_time"
+		"origin" "4951.830078125 5815.6899414063 -135.4700012207"
+		"angles" "0 -5.1900000572 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_094_airboat_time.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_095_floating_supplies"
+		"origin" "289.3099975586 3155.5700683594 -410.8800048828"
+		"angles" "0 76.7799987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_095_floating_supplies.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_093_zombie_surprise"
+		"origin" "-8123.58984375 13789.7099609375 1.5800000429"
+		"angles" "0 67.6100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_093_zombie_surprise.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+}

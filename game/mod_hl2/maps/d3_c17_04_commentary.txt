@@ -1,0 +1,33 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_244_hopper_mine_training"
+		"origin" "-3989.7700195313 -3302.6999511719 174.7299957275"
+		"angles" "0 -38.1699981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_244_hopper_mine_training.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dario Casali"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_257_ai_behaviors"
+		"origin" "-3741.5200195313 -3786.830078125 173.4900054932"
+		"angles" "0 -109.3399963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_257_ai_behaviors.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+}

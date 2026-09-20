@@ -1,0 +1,196 @@
+Commentary
+{
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1351.290771 2388.777588 -10.452896"
+		"commentaryfile" "#lostcoast\commentary\comm_intro.wav"
+		"commentaryfile_nohdr" "#lostcoast\commentary\comm_intro_nohdr.wav"
+		"speakers" "Gabe Newell"
+		"targetname" "comm_node_1"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "908.750183 2374.643555 -17.439583"
+		"commentaryfile" "#lostcoast\commentary\comm_hdr.wav"
+		"speakers" "Gary McTaggart"
+		"targetname" "comm_node_2"
+		"precommands" "mat_show_ab_hdr 1;crosshair 0;mat_show_ab_hdr_hudelement 1"
+		"postcommands" "mat_show_ab_hdr 0;crosshair 1;mat_show_ab_hdr_hudelement 0"
+		"viewposition" "comm_node_2_viewposition"
+		"viewtarget" "comm_node_2_viewtarget"
+	}
+	entity
+	{
+		"classname" "info_target"
+		"targetname" "comm_node_2_viewposition"
+		"origin" "1406.803833 2360.266602 7.674587"
+	}
+	entity
+	{
+		"classname" "info_target"
+		"targetname" "comm_node_2_viewtarget"
+		"origin" "961.025269 2748.508301 -50.376862"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1141.783691 2792.952637 15.585670"
+		"commentaryfile" "#lostcoast\commentary\comm_beach.wav"
+		"speakers" "Viktor Antonov"
+		"targetname" "comm_node_3"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1776.996094 -533.980591 8.147392"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_shipnode.wav"
+		"speakers" "Robin Walker"
+		"targetname" "comm_node_4"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "592.548523 2643.303711 01.109543"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_character.wav"
+		"speakers" "Randy Lundeen"
+		"targetname" "comm_node_5"
+		"precommands" "ai_disable"
+		"postcommands" "ai_disable"
+	}	
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "728.258545 3472.580566 28.552147"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_water.wav"
+		"speakers" "Gary McTaggart"
+		"targetname" "comm_node_6"
+		"precommands" "mat_showwatertextures 1;crosshair 0;ai_disable"
+		"postcommands" "mat_showwatertextures 0;crosshair 1;ai_disable"
+		"viewposition" "comm_node_6_viewposition"
+		"viewtarget" "comm_node_6_viewtarget"
+	}
+	entity
+	{
+		"classname" "info_target"
+		"targetname" "comm_node_6_viewposition"
+		"origin" "743.763123 3401.772217 57.336315"
+	}
+	entity
+	{
+		"classname" "info_target"
+		"targetname" "comm_node_6_viewtarget"
+		"origin" "391.490723 3538.476563 -38.168991"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "853.423035 5161.785645 1191.674438"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_cliffside.wav"
+		"speakers" "Robin Walker"
+		"targetname" "comm_node_7"
+		"precommands" "ai_disable"
+		"postcommands" "ai_disable"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1884.500732 4611.980469 2600.146973"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_courtyard.wav"
+		"speakers" "Robin Walker"
+		"targetname" "comm_node_8"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1213.953735 4787.380371 2356.031250"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_tone.wav"
+		"speakers" "Chris Green"
+		"targetname" "comm_node_9"
+		"connections"
+		{
+			"OnCommentaryStarted" "comm_clientcommand,Command,mat_show_histogram 1,42,-1"
+			"OnCommentaryStopped" "comm_clientcommand,Command,mat_show_histogram 0,0,-1"
+		}
+	}
+	entity
+	{
+		"classname" "point_clientcommand"
+		"targetname" "comm_clientcommand"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1659.919922 4164.820801 2720.573975"
+		"commentaryfile" "#lostcoast\commentary\comm_shader.wav"
+		"speakers" "Chris Green"
+		"targetname" "comm_node_10"
+		"precommands" "ai_disable;crosshair 0;"
+		"postcommands" "ai_disable;crosshair 1;"
+		"viewposition" "comm_node_10_viewposition"
+		"viewtarget" "comm_node_10_viewtarget"
+	}
+	entity
+	{
+		"classname" "info_target"
+		"targetname" "comm_node_10_viewposition"
+		"origin" "1644.755493 4141.124023 2782.420410"
+	}
+	entity
+	{
+		"classname" "info_target"
+		"targetname" "comm_node_10_viewtarget"
+		"origin" "1588.849243 3993.968506 2762.561035"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1470.091309 3889.558838 2725.241211"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_monastery01.wav"
+		"speakers" "Viktor Antonov"
+		"targetname" "comm_node_11"
+		"precommands" "ai_disable"
+		"postcommands" "ai_disable"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1474.126343 3489.798096 2737.812012"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_monastery02.wav"
+		"speakers" "Viktor Antonov"
+		"targetname" "comm_node_12"
+		"precommands" "ai_disable"
+		"postcommands" "ai_disable"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "1293.480469 3143.701416 2785.812012"
+		"angles" "0 45 0"
+		"commentaryfile" "#lostcoast\commentary\comm_puzzle.wav"
+		"speakers" "Robin Walker"
+		"targetname" "comm_node_13"
+		"precommands" "ai_disable"
+		"postcommands" "ai_disable"
+	}
+	entity
+	{
+		"classname" "point_commentary_node"
+		"origin" "2033.322632 2903.616699 2721.812012"
+		"angles" "0 90 0"
+		"commentaryfile" "#lostcoast\commentary\comm_outro.wav"
+		"speakers" "Gabe Newell"
+		"targetname" "comm_node_14"
+		"precommands" "ai_disable"
+		"postcommands" "ai_disable"
+	}
+}

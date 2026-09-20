@@ -1,0 +1,18 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_243_tenements_and_courtyards"
+		"origin" "3101.3000488281 1361.6199951172 241.3000030518"
+		"angles" "0 -8.6599998474 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_243_tenements_and_courtyards.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Danika Rogers"
+		"synopsis" ""
+	}
+}

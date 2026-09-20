@@ -8,10 +8,10 @@ $MacroRequiredAllowEmpty ADDITIONAL_PROTOC_ARGS
 $CustomBuildStep "proto"
 {
 	$Description	"Running Protocol Buffer Compiler on $(InputFileName)..."
-	$CommandLine	"if not exist $GENERATED_PROTO_DIR mkdir $GENERATED_PROTO_DIR" "\n" \
-					"$SRCDIR\thirdparty\protobuf-2.6.1\bin\win64\2015\staticcrt\release\protoc.exe --proto_path=$SRCDIR\thirdparty\protobuf-2.6.1\src" \
-					" --proto_path=$(InputDir) --proto_path=$SRCDIR\gcsdk --proto_path=$SRCDIR\game\shared" \
-					" $ADDITIONAL_PROTOC_ARGS --cpp_out=$GENERATED_PROTO_DIR $(InputPath)" [$WINDOWS]
+	$CommandLine	"if not exist $QUOTE$GENERATED_PROTO_DIR$QUOTE mkdir $QUOTE$GENERATED_PROTO_DIR$QUOTE" "\n" \
+					"$QUOTE$SRCDIR\thirdparty\protobuf-2.6.1\bin\win64\2015\staticcrt\release\protoc.exe$QUOTE --proto_path=$QUOTE$SRCDIR\thirdparty\protobuf-2.6.1\src$QUOTE" \
+					" --proto_path=$QUOTE$(InputDir)$QUOTE --proto_path=$QUOTE$SRCDIR\gcsdk$QUOTE --proto_path=$QUOTE$SRCDIR\game\shared$QUOTE" \
+					" $ADDITIONAL_PROTOC_ARGS --cpp_out=$QUOTE$GENERATED_PROTO_DIR$QUOTE $QUOTE$(InputPath)$QUOTE" [$WINDOWS]
 
 	$CommandLine	"mkdir -p $GENERATED_PROTO_DIR 2> /dev/null;"  \
 					"$SRCDIR/thirdparty/protobuf-2.6.1/bin/linux32/protoc --proto_path=$SRCDIR\thirdparty\protobuf-2.6.1\src" \

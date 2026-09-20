@@ -1,0 +1,78 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_253_strider"
+		"origin" "-195.3999938965 4344.5297851563 180.8899993896"
+		"angles" "0 125.4499969482 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_253_strider.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_246_strider_2"
+		"origin" "-669.7800292969 5430.169921875 172.2799987793"
+		"angles" "0 108.5599975586 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_246_strider_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_241_perf_arena"
+		"origin" "-155.7799987793 6616.4599609375 299.450012207"
+		"angles" "0 96.3499984741 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_241_perf_arena.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Aaron Seeler"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_240_strider_4"
+		"origin" "-1307.3399658203 6217.7998046875 118.9499969482"
+		"angles" "0 -65.3700027466 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_240_strider_4.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_242_space_re-use"
+		"origin" "-2495.080078125 5508.330078125 174.4199981689"
+		"angles" "0 58.1300010681 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_242_space_re-use.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Chris Green"
+		"synopsis" ""
+	}
+}

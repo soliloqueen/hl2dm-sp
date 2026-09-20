@@ -1,0 +1,70 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_177_breen_monologue"
+		"origin" "46.6699981689 175.0200042725 2345.2700195313"
+		"angles" "0 142.7799987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_177_breen_monologue.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Marc Laidlaw"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_179_elevator_fight"
+		"origin" "265 1087 2344"
+		"angles" "0 -171.6199951172 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_179_elevator_fight.mp3"
+		"viewtarget" "cn_179_elevator_fight"
+		"viewposition" "cn_179_elevator_fight_target_cam"
+		"prevent_movement" 1
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cn_179_elevator_fight_target_cam"
+		"origin" "449 1098 2511"
+		"angles" "0 -167.7799987793 0"
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_180_replacing_the_prefabs"
+		"origin" "191.6300048828 235.5299987793 6447.4702148438"
+		"angles" "0 -140.0099945068 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_180_replacing_the_prefabs.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_181_strider_fight"
+		"origin" "-1664.5500488281 -7184.3701171875 6189.0400390625"
+		"angles" "0 -90.2699966431 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_181_strider_fight.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ted Backman"
+		"synopsis" ""
+	}
+}

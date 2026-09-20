@@ -1,0 +1,33 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_286_response_rules"
+		"origin" "-6127.4599609375 2209.9099121094 -3324.3999023438"
+		"angles" "0 161.2799987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_286_response_rules.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Scott Dalton"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_238_the_real_final_arena"
+		"origin" "-7104.669921875 1118.2399902344 -3361.4099121094"
+		"angles" "0 -96.75 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_238_the_real_final_arena.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Tom Leonard"
+		"synopsis" ""
+	}
+}

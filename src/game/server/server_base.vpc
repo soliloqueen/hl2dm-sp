@@ -45,7 +45,7 @@ $Configuration	"Release"
 
 $CustomBuildStep "nut"
 {
-	$CommandLine	"python $SRCDIR\devtools\bin\texttoarray.py $(InputPath) g_Script_$(InputName)> $(InputName)_nut.h" [$WINDOWS]
+	$CommandLine	"python $QUOTE$SRCDIR\devtools\bin\texttoarray.py$QUOTE $QUOTE$(InputPath)$QUOTE g_Script_$(InputName)> $(InputName)_nut.h" [$WINDOWS]
 	$CommandLine	"python $SRCDIR\devtools\bin\texttoarray.py $(InputPath) g_Script_$(InputName)> $(InputName)_nut.h" [$POSIX]
 	$Description	"$(InputFileName) produces $(InputName)_nut.h"
 	$Outputs		"$(InputName)_nut.h"

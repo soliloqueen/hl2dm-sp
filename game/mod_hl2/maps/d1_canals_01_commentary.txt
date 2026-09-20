@@ -1,0 +1,227 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_023_metrocop_scene"
+		"origin" "596.4699707031 -7339.1499023438 -73.3300018311"
+		"angles" "0 137.8699951172 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_023_metrocop_scene.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_012_staircase"
+		"origin" "-666 -6823 312"
+		"angles" "0 38.9599990845 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_012_staircase.mp3"
+		"viewtarget" "cn_012_staircase_target"
+		"viewposition" "cn_012_staircase_target_cam"
+		"prevent_movement" 1
+		"speakers" "Aaron Seeler"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cn_012_staircase_target"
+		"origin" "-131 -6854 670"
+		"angles" "0 0 0"
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cn_012_staircase_target_cam"
+		"origin" "-666 -6823 332"
+		"angles" "0 0 0"
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_015_city_17_awakens"
+		"origin" "24.0599994659 -6742.2998046875 620.8300170898"
+		"angles" "0 37.0499992371 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_015_city_17_awakens.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_078_scanners"
+		"origin" "853.8599853516 -6614.8100585938 579.2100219727"
+		"angles" "0 -16.8099994659 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_078_scanners.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Kerry Davis"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_070_explosive_barrels"
+		"origin" "-68.9700012207 -6446.0200195313 628.3200073242"
+		"angles" "0 121.6600036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_070_explosive_barrels.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_072_helicopter_peekaboo"
+		"origin" "92.2200012207 -2373.3999023438 450.8599853516"
+		"angles" "0 59.4199981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_072_helicopter_peekaboo.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_075_pistol_design"
+		"origin" "1132.8000488281 -6703.9399414063 569.3200073242"
+		"angles" "0 75.5299987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_075_pistol_design.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_076_shatterglass"
+		"origin" "430.75 -3302.2800292969 425.5"
+		"angles" "0 -153.8600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_076_shatterglass.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_019_overwatch"
+		"origin" "651.2399902344 -6916.66015625 579.2100219727"
+		"angles" "0 -116.5999984741 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_019_overwatch.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Josh Weier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_265_water_shader"
+		"origin" "534.4099731445 429.8900146484 -75.6100006104"
+		"angles" "0 86.9100036621 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_265_water_shader.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_077_lambda_caches"
+		"origin" "708.8400268555 -6183.9399414063 560.8599853516"
+		"angles" "0 83.3799972534 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_077_lambda_caches.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Laura Dubuk"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_073_iterative_passes"
+		"origin" "344.1400146484 -1666.1700439453 304.8500061035"
+		"angles" "0 72.5899963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_073_iterative_passes.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_018_interstitial_scenes"
+		"origin" "498.7799987793 2441.419921875 -45.7000007629"
+		"angles" "0 137.3399963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_018_interstitial_scenes.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_020_boxcarjoe"
+		"origin" "802.4000244141 2672.4299316406 -27.3700008392"
+		"angles" "0 138.8600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_020_box_car_joe.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Laura Dubuk"
+		"synopsis" ""
+	}
+}

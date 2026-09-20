@@ -1,0 +1,213 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_124_pick_up_that_can"
+		"origin" "-3726.1101074219 -821.9799804688 108.3300018311"
+		"angles" "0 -18.7199993134 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_124_pick_up_that_can.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_131_playtesting"
+		"origin" "-3780.2199707031 -1807.6999511719 113.0999984741"
+		"angles" "0 -91.5800018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_131_playtesting.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" "Playtesting"
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_125_promises"
+		"origin" "-3358.1298828125 -2361.5400390625 108.5699996948"
+		"angles" "0 74.7099990845 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_125_promises.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Danika Rogers"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_134_the_citadel"
+		"origin" "-2987.1599121094 -2047.5100097656 110.3300018311"
+		"angles" "0 0.75 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_134_the_citadel.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_126_exploration"
+		"origin" "-2361.0600585938 -1791 35.2900009155"
+		"angles" "0 1.8099999428 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_126_exploration.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Sawyer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_282_ropes"
+		"origin" "-2709.0900878906 -1500.6600341797 65.2799987793"
+		"angles" "0 31.3099994659 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_282_ropes.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_132_playtesting_anecdote_1"
+		"origin" "-2624.0400390625 -984.2700195313 42.9099998474"
+		"angles" "0 87.6100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_132_playtesting_anecdote_1.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Boone"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_128_strider"
+		"origin" "-2773.3100585938 -4211.6000976563 38.3199996948"
+		"angles" "0 -56.3400001526 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_128_strider.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Doug Wood"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_127_early_game_exploration"
+		"origin" "-2970.1999511719 -4478.759765625 50.1800003052"
+		"angles" "0 -112.5299987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_127_early_game_exploration.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_135_close_captions"
+		"origin" "-3666.7399902344 -4724.3198242188 45.4700012207"
+		"angles" "0 -96.2300033569 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_135_close_captions.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Yahn Bernier"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_129_physics_simulation"
+		"origin" "-4468.6298828125 -3683.1499023438 43.0600013733"
+		"angles" "0 156.9600067139 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_129_physics_simulation.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_133_cratebaby"
+		"origin" "-4590.830078125 -3541.6398925781 32.1399993896"
+		"angles" "0 122.8600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_133_cratebaby.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Scott Dalton"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_130_physics_simulation_2"
+		"origin" "-4837.9399414063 -3603.0100097656 36.7299995422"
+		"angles" "0 177.1100006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_130_physics_simulation_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jeff Lane"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_123_playground"
+		"origin" "-4899.759765625 -3968.8601074219 40.1699981689"
+		"angles" "0 -107.7399978638 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_123_playground.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobsen"
+		"synopsis" ""
+	}
+}

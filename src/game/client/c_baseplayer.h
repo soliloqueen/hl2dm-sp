@@ -429,6 +429,7 @@ public:
 
 	// For weapon prediction
 	bool			m_fOnTarget;		//Is the crosshair on a target?
+	bool			m_bLevelTransition;	//This level was entered through a level transition (server-set).
 	
 	char			m_szAnimExtension[32];
 

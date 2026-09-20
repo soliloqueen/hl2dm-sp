@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_206_flares"
+		"origin" "-2108.9799804688 2744.1599121094 1010.1199951172"
+		"angles" "0 -67.3199996948 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_206_flares.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Quintin Doroquez"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_186_meeting_mossman"
+		"origin" "-631.8900146484 687.4000244141 975.3200073242"
+		"angles" "0 -100.6999969482 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_186_meeting_mossman.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ariel Diaz"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_188_mossman_and_eli"
+		"origin" "240.1100006104 349.9299926758 1041.1500244141"
+		"angles" "0 -3.4600000381 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_188_mossman_and_eli.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+}

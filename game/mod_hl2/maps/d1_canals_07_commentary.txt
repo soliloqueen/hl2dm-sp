@@ -1,0 +1,63 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_096_grenade_intro"
+		"origin" "10550 1700 -203"
+		"angles" "0 150.2700042725 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_096_grenade_intro.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Brian Jacobson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_273_air_resistance"
+		"origin" "10089.1904296875 1578.1199951172 -210.6799926758"
+		"angles" "0 -24.2099990845 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_273_air_resistance.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jay Stelly"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_097_puzzle_layers"
+		"origin" "7259.6201171875 1336.4499511719 -211.6699981689"
+		"angles" "0 -179.0500030518 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_097_puzzle_layers.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_098_metrocop_strafing"
+		"origin" "5243.9702148438 -1313.1800537109 -420.7399902344"
+		"angles" "0 -20.5 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_098_metrocop_strafing.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Doug Wood"
+		"synopsis" ""
+	}
+}

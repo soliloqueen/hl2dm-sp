@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_031_the_bridge"
+		"origin" "3327.9699707031 3703.2600097656 1838.25"
+		"angles" "0 -88.5699996948 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_031_the_bridge.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Charlie Brown"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_054_bridge_playtesting"
+		"origin" "3272.25 2267.8100585938 1835.1600341797"
+		"angles" "0 -69.0400009155 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_054_bridge_playtesting.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Boone"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_026_bridge_gunship"
+		"origin" "3427.2600097656 925.6300048828 1527.6999511719"
+		"angles" "0 -88.7300033569 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_026_bridge_gunship.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Adrian Finol"
+		"synopsis" ""
+	}
+}

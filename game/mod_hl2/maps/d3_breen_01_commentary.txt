@@ -1,0 +1,69 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_166_final_scene"
+		"origin" "-1965.6899414063 200 624"
+		"angles" "0 -92.9199981689 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_166_final_scene.mp3"
+		"viewtarget" "cn_166_final_scene_cam_target"
+		"viewposition" "cn_166_final_scene_cam"
+		"prevent_movement" 1
+		"speakers" "Bill Van Buren"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_167_end_game_scramble"
+		"origin" "-1064.6199951172 53.2599983215 -208.7799987793"
+		"angles" "0 -88.8300018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_167_end_game_scramble.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dave Riller"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_168_combine_portal_effects"
+		"origin" "-707.3599853516 -79.7200012207 1328.3800048828"
+		"angles" "0 5.1999998093 0"
+		"precommands" "notarget"
+		"postcommands" "notarget"
+		"commentaryfile" "#commentary\cn_168_combine_portal_effects.mp3"
+		"viewtarget" "target_168_combine_portal_effects"
+		"viewposition" ""
+		"prevent_movement" 1
+		"speakers" "Gary McTaggart"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "target_168_combine_portal_effects"
+		"origin" "-321.1499938965 -28.5799999237 1509.0999755859"
+		"angles" "0 2.8199999332 0"
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cn_166_final_scene_cam_target"
+		"origin" "-1972.4399414063 584.7800292969 606.2800292969"
+		"angles" "0 126.5 0"
+	}
+	"entity"
+	{
+		"classname" "info_target"
+		"targetname" "cn_166_final_scene_cam"
+		"origin" "-1947.3199462891 283.5599975586 661.9199829102"
+		"angles" "0 99.0100021362 0"
+	}
+}

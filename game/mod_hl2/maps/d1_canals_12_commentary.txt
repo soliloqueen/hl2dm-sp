@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_108_skybox_time_of_day"
+		"origin" "8045.9301757813 7763.6000976563 468.6199951172"
+		"angles" "0 -80.8600006104 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_108_skybox_time_of_day.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_107_lambda_cache_interlude"
+		"origin" "638.4899902344 10725.9599609375 459.2200012207"
+		"angles" "0 102.3399963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_107_lambda_cache_interlude.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Danika Rogers"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_106_donkey_kong_barrel_ramp"
+		"origin" "-8131 4155 622"
+		"angles" "0 -0.8399999738 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_106_donkey_kong_barrel_ramp.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+}

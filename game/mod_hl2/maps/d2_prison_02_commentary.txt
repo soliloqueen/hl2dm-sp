@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_189_nova_prospekt_entry"
+		"origin" "-1091.3699951172 2596.2600097656 428.1499938965"
+		"angles" "0 -89.2300033569 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_189_nova_prospekt_entry.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Danika Rogers"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_183_turrets"
+		"origin" "-1965.8100585938 2505.9899902344 304.8099975586"
+		"angles" "0 -138.2899932861 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_183_turrets.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Mike Dussault"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_209_nova_prospekt_process"
+		"origin" "-1372.9100341797 2688.6000976563 434.7699890137"
+		"angles" "0 42.5800018311 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_209_nova_prospekt_process.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Smith"
+		"synopsis" ""
+	}
+}

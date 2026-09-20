@@ -233,6 +233,8 @@ END_RECV_TABLE()
 		
 		RecvPropInt			( RECVINFO(m_fOnTarget) ),
 
+		RecvPropInt			( RECVINFO(m_bLevelTransition) ),
+
 		RecvPropInt			( RECVINFO( m_nTickBase ) ),
 		RecvPropInt			( RECVINFO( m_nNextThinkTick ) ),
 
@@ -1185,6 +1187,38 @@ void C_BasePlayer::DetermineVguiInputMode( CUserCmd *pCmd )
 //-----------------------------------------------------------------------------
 bool C_BasePlayer::CreateMove( float flInputSampleTime, CUserCmd *pCmd )
 {
+	// The Deathmatch engine loses the local view across a level change; re-apply the
+	// retained angles, for a real transition only.
+	static QAngle s_angLastView;
+	static char s_szLastLevel[256] = { 0 };
+	static bool s_bHaveLastView = false;
+	static int s_nHoldViewCommands = 0;
+
+	const char *pszLevel = engine->GetLevelName();
+	if ( pszLevel && Q_stricmp( pszLevel, s_szLastLevel ) )
+	{
+		const bool bWasInALevel = ( s_szLastLevel[0] != 0 );
+		Q_strncpy( s_szLastLevel, pszLevel, sizeof( s_szLastLevel ) );
+
+		s_nHoldViewCommands = 0;
+
+		if ( bWasInALevel && s_bHaveLastView && m_bLevelTransition )
+		{
+			DevMsg( 2, "LevelChange: keeping the local view angles (%.1f %.1f %.1f)\n",
+					s_angLastView.x, s_angLastView.y, s_angLastView.z );
+
+			// Hold for a few commands: the engine's view reset spans more than one frame.
+			s_nHoldViewCommands = 8;
+		}
+	}
+
+	if ( s_nHoldViewCommands > 0 )
+	{
+		s_nHoldViewCommands--;
+		pCmd->viewangles = s_angLastView;
+		engine->SetViewAngles( s_angLastView );
+	}
+
 	// Allow the vehicle to clamp the view angles
 	if ( IsInAVehicle() )
 	{
@@ -1238,6 +1272,10 @@ bool C_BasePlayer::CreateMove( float flInputSampleTime, CUserCmd *pCmd )
 	
 	// Check to see if we're in vgui input mode...
 	DetermineVguiInputMode( pCmd );
+
+	// Remember where the player was looking, for the level change case above.
+	s_angLastView = pCmd->viewangles;
+	s_bHaveLastView = true;
 
 	return true;
 }

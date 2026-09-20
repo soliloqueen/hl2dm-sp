@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_254_sniper_streets"
+		"origin" "4288.2700195313 3738.8000488281 47.0099983215"
+		"angles" "0 -75.2799987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_254_sniper_streets.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Eric Kirchmer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_248_sniper_streets_2"
+		"origin" "4884.2001953125 5580.2900390625 48.5499992371"
+		"angles" "0 65.6299972534 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_248_sniper_streets_2.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Erik Johnson"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_250_sniper_streets_3"
+		"origin" "6449.2202148438 6182.3500976563 51.0299987793"
+		"angles" "0 -0.7599999905 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_250_sniper_streets_3.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Jakob Jungels"
+		"synopsis" ""
+	}
+}

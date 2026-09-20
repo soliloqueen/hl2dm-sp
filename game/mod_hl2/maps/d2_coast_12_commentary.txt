@@ -1,0 +1,33 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_055_thumper_final_stage"
+		"origin" "4784.990234375 -11035.9404296875 340.4599914551"
+		"angles" "0 91.5400009155 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_055_thumper_final_stage.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Boone"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_029_assault_on_nova_prospekt"
+		"origin" "4647.8701171875 -7487.080078125 376.2699890137"
+		"angles" "0 109.0899963379 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_029_assault_on_nova_prospekt.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ariel Diaz"
+		"synopsis" ""
+	}
+}

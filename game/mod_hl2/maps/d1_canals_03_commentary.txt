@@ -1,0 +1,48 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_089_manhack_matt"
+		"origin" "-892.7399902344 2994.3200683594 -814.4000244141"
+		"angles" "0 -140.9600067139 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_089_manhack_matt.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "John Morello"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_087_explosive_barrel_factory"
+		"origin" "-2264.8898925781 -889.799987793 -1208"
+		"angles" "0 168.5299987793 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_087_explosive_barrel_factory.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "David Speyrer"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_088_rising_water"
+		"origin" "-2726.7900390625 107.4100036621 -1090.7800292969"
+		"angles" "0 171.4299926758 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_088_rising_water.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Dhabih Eng"
+		"synopsis" ""
+	}
+}

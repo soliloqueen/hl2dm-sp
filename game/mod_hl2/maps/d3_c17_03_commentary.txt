@@ -1,0 +1,33 @@
+"Entities"
+{
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_256_citizen_squads"
+		"origin" "-3714.5100097656 -3892.6999511719 52.7400016785"
+		"angles" "0 -53.4300003052 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_256_citizen_squads.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Ken Birdwell"
+		"synopsis" ""
+	}
+	"entity"
+	{
+		"classname" "point_commentary_node"
+		"targetname" "cn_255_citizen_squad_details"
+		"origin" "-2405.6999511719 -2340.7700195313 45.8300018311"
+		"angles" "0 57.1199989319 0"
+		"precommands" ""
+		"postcommands" ""
+		"commentaryfile" "#commentary\cn_255_citizen_squad_details.mp3"
+		"viewtarget" ""
+		"viewposition" ""
+		"prevent_movement" 0
+		"speakers" "Matt Wright"
+		"synopsis" ""
+	}
+}

@@ -1,0 +1,3 @@
+// Stuff the command line: the engine queues "exec valve.rc" at startup and nothing
+// else runs stuffcmds, so +commands like +map would otherwise never execute.
+stuffcmds

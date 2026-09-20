@@ -94,10 +94,20 @@ void ClientPutInServer( edict_t *pEdict, const char *playername )
 
 void ClientActive( edict_t *pEdict, bool bLoadGame )
 {
-	// Can't load games in CS!
-	Assert( !bLoadGame );
-
 	CHL2MP_Player *pPlayer = ToHL2MPPlayer( CBaseEntity::Instance( pEdict ) );
+
+	if ( bLoadGame )
+	{
+		// A load takes everything about the player from the save; rebuilding through
+		// FinishClientPutInServer() would wipe it. Mirrors HL2 single player.
+		Assert( pPlayer );
+		if ( pPlayer )
+		{
+			pPlayer->InitialSpawn();
+		}
+		return;
+	}
+
 	FinishClientPutInServer( pPlayer );
 }
 
