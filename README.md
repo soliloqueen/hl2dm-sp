@@ -1,7 +1,6 @@
 # hl2dm-sp
 
-Source SDK 2013 game code for the singleplayer campaigns, built as mods that run on the
-installed **Half-Life 2: Deathmatch** engine (x64).
+Source SDK 2013 game code for the singleplayer campaigns, built as mods that run on **Half-Life 2: Deathmatch** base (x64).
 
 ## Build instructions
 
