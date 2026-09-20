@@ -1,4 +1,8 @@
-buildallprojects text
+# Line endings: the repository stores LF and every checkout gets LF, Windows included.
+# Only paths whose tools genuinely require CRLF are exempt (see the bottom of this file).
+* text=auto eol=lf
+
+buildallprojects text eol=lf
 vpc binary
 
 *.sh text
@@ -43,3 +47,10 @@ protoc binary
 ccache binary
 
 *_english.txt binary
+
+# Windows tools that require CRLF in the working tree
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.dsp text eol=crlf
+*.dsw text eol=crlf
+steam.inf text eol=crlf
