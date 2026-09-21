@@ -335,7 +335,7 @@ public:
 			pRestore->EndBlock();
 		}
 
-		Msg( "Physics save/restore: %d pointer(s) in the repair table, %d int read(s) repaired\n", m_RepairLookup.Count(), m_nRepairedReads );
+		DevMsg( "Physics save/restore: %d pointer(s) in the repair table, %d int read(s) repaired\n", m_RepairLookup.Count(), m_nRepairedReads );
 	}
 	
 	//---------------------------------

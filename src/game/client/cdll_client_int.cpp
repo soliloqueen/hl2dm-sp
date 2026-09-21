@@ -875,10 +875,9 @@ int CHLClient::Init( CreateInterfaceFn appSystemFactory, CreateInterfaceFn physi
 	InitCRTMemDebug();
 	MathLib_Init( 2.2f, 2.2f, 0.0f, 2.0f );
 
-	// Answers "which client.dll did the engine load?" from a -condebug log, when
-	// the in-game UI gives no other signal.
+	// Answers "which client.dll did the engine load?" in a -condebug log (-dev enables it).
 	const char *pGameDir = CommandLine()->ParmValue( "-game", "(default)" );
-	Msg( "MOD CLIENT BUILD " __DATE__ " " __TIME__ " - game dir '%s'\n", pGameDir );
+	DevMsg( "MOD CLIENT BUILD " __DATE__ " " __TIME__ " - game dir '%s'\n", pGameDir );
 
 
 #ifdef SIXENSE
