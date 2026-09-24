@@ -1941,7 +1941,9 @@ private:
 	float	m_flVolume;
 	bool	m_active;
 	string_t m_iszListener;	// name of entity to look at while talking
-	CBaseEntity *m_pActivator;
+	// EHANDLE to match FIELD_EHANDLE (4 bytes) in the datadesc. A CBaseEntity *
+	// is 8 bytes on x64 and save/restore rewrote only half the slot.
+	EHANDLE m_pActivator;
 
 	COutputEvent m_OnBeginSentence;
 	COutputEvent m_OnEndSentence;
