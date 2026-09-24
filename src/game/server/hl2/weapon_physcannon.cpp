@@ -2774,14 +2774,32 @@ bool CGrabController::UpdateObject( CBasePlayer *pPlayer, float flError )
 	
 	// Now clamp a sphere of object radius at end to the player's bbox
 	Vector radial = physcollision->CollideGetExtent( pPhys->GetCollide(), vec3_origin, pEntity->GetAbsAngles(), -forward );
+	Vector vecMins, vecMaxs;
+	physcollision->CollideGetAABB( &vecMins, &vecMaxs, pPhys->GetCollide(), vec3_origin, pEntity->GetAbsAngles() );
+	// CollideGetExtent is the support point from the collide's local origin (see the tanPts/bottomPoint
+	// callers) and not a half-extent, so for a model whose origin sits at one end, it reports 0.
 	Vector player2d = pPlayer->CollisionProp()->OBBMaxs();
 	float playerRadius = player2d.Length2D();
-	float radius = playerRadius + fabs(DotProduct( forward, radial ));
+	float radius = playerRadius + fabs( DotProduct( forward, radial - ( vecMins + vecMaxs ) * 0.5f ) );
 
 	float distance = 24 + ( radius * 2.0f );
 
 	// Add the prop's distance offset
 	distance += m_flDistanceOffset;
+
+	// Report if it's naughty.
+	float flMinDistance = 24 + radius;
+	if ( distance < flMinDistance )
+	{
+		static float s_flNextHoldLog = 0;
+		if ( gpGlobals->curtime >= s_flNextHoldLog )
+		{
+			s_flNextHoldLog = gpGlobals->curtime + 1.0f;
+			DevMsg( "Held %s: hold distance %.1f floored to %.1f (offset %.1f)\n",
+				pEntity->GetClassname(), distance, flMinDistance, m_flDistanceOffset );
+		}
+		distance = flMinDistance;
+	}
 
 	Vector start = pPlayer->Weapon_ShootPosition();
 	Vector end = start + ( forward * distance );
@@ -2803,7 +2821,10 @@ bool CGrabController::UpdateObject( CBasePlayer *pPlayer, float flError )
 	Vector playerMins, playerMaxs, nearest;
 	pPlayer->CollisionProp()->WorldSpaceAABB( &playerMins, &playerMaxs );
 	Vector playerLine = pPlayer->CollisionProp()->WorldSpaceCenter();
-	CalcClosestPointOnLine( end, playerLine+Vector(0,0,playerMins.z), playerLine+Vector(0,0,playerMaxs.z), nearest, NULL );
+	// WorldSpaceAABB is absolute, so the offset grew with player world height.
+	// CalcClosestPointOnLine( end, playerLine+Vector(0,0,playerMins.z), playerLine+Vector(0,0,playerMaxs.z), nearest, NULL );
+	CalcClosestPointOnLine( end, Vector( playerLine.x, playerLine.y, playerMins.z ),
+		Vector( playerLine.x, playerLine.y, playerMaxs.z ), nearest, NULL );
 
 	if( !m_bAllowObjectOverhead )
 	{
@@ -2811,6 +2832,11 @@ bool CGrabController::UpdateObject( CBasePlayer *pPlayer, float flError )
 		float len = VectorNormalize(delta);
 		if ( len < radius )
 		{
+			if ( len < 0.001f )
+			{
+				// Looking straight up or down leaves no direction to push along.
+				AngleVectors( QAngle( 0, pPlayer->EyeAngles().y, 0 ), &delta, NULL, NULL );
+			}
 			end = nearest + radius * delta;
 		}
 	}
