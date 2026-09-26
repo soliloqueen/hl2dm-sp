@@ -294,27 +294,14 @@ public:
 		}
 		else if ( pTypeDesc->fieldSize > 1 )
 		{
-			// Pointer array, one element per call. Versions 5-7 saved (low, high) pairs, so
-			// element i is word 2i and only the first half of the array exists.
-			typedescription_t single = *pTypeDesc;
-			single.fieldSize = 1;
+			// Pointer array: resolved here from the saved ids.
+			CUtlVector<int> ids;
+			ReadIds( pRestore, nWords, ids );
+			int nStride = IsPairLayout( ids ) ? 2 : 1;
 			void **ppSlots = (void **)fieldInfo.pField;
-			int nStride = m_bLegacyLayout ? 2 : 1;
 			for ( int i = 0; i < pTypeDesc->fieldSize; ++i )
 			{
-				ppSlots[i] = NULL;
-				if ( i * nStride >= nWords )
-					continue;
-
-				SaveRestoreFieldInfo_t element = { &ppSlots[i], fieldInfo.pOwner, &single };
-				m_pPointerSlot = &ppSlots[i];
-				pOps->Restore( element, pRestore );
-
-				if ( m_bLegacyLayout && i * nStride + 1 < nWords )
-				{
-					int nUpperHalf;
-					pRestore->ReadInt( &nUpperHalf );
-				}
+				ppSlots[i] = ( i * nStride < ids.Count() ) ? ResolveId( ids[i * nStride] ) : NULL;
 			}
 			++m_nArraysHandled;
 		}
@@ -999,21 +986,17 @@ private:
 
 		int nCount = 0;
 		pRestore->ReadInt( &nCount );
-		nCount = clamp( nCount, 0, nWords - 1 );
 
-		for ( int i = 0; i < nCount; ++i )
+		CUtlVector<int> ids;
+		ReadIds( pRestore, clamp( nCount, 0, nWords - 1 ), ids );
+		int nStride = IsPairLayout( ids ) ? 2 : 1;
+
+		for ( int i = 0; i < ids.Count(); i += nStride )
 		{
-			int nId = 0;
-			pRestore->ReadInt( &nId );
-
-			// Versions 5-7 saved (low, high) pairs; only the first half of the list exists.
-			if ( m_bLegacyLayout && ( i & 1 ) )
-				continue;
-
-			int iObject = m_RestoredObjects.Find( (unsigned int)nId );
-			if ( nId && iObject != m_RestoredObjects.InvalidIndex() )
+			void *pObject = ResolveId( ids[i] );
+			if ( pObject )
 			{
-				pList->AddToTail( m_RestoredObjects[iObject] );
+				pList->AddToTail( pObject );
 			}
 			else
 			{
@@ -1022,10 +1005,47 @@ private:
 			}
 		}
 
-		if ( m_bLegacyLayout )
+		if ( nStride == 2 )
 		{
-			m_nListLegacyLost += nCount / 2;
+			m_nListLegacyLost += ids.Count() / 2;
 		}
+	}
+
+	void ReadIds( IRestore *pRestore, int nCount, CUtlVector<int> &ids )
+	{
+		ids.SetCount( MAX( nCount, 0 ) );
+		for ( int i = 0; i < ids.Count(); ++i )
+		{
+			ids[i] = 0;
+			pRestore->ReadInt( &ids[i] );
+		}
+	}
+
+	void *ResolveId( int nId )
+	{
+		int i = m_RestoredObjects.Find( (unsigned int)nId );
+		return ( nId && i != m_RestoredObjects.InvalidIndex() ) ? m_RestoredObjects[i] : NULL;
+	}
+
+	// Whether saved ids are (low, high) pointer pairs. 32 bit version 5 saves hold one id per
+	// pointer; x64 ones hold pairs, where only the even (low) words resolve.
+	bool IsPairLayout( const CUtlVector<int> &ids )
+	{
+		if ( !m_bLegacyLayout )
+			return false;
+		if ( m_nLoadVersion >= 6 )
+			return true;
+
+		bool bEvenResolves = false;
+		for ( int i = 0; i < ids.Count(); ++i )
+		{
+			if ( !ResolveId( ids[i] ) )
+				continue;
+			if ( i & 1 )
+				return false;
+			bEvenResolves = true;
+		}
+		return bEvenResolves;
 	}
 
 	// Skips the version 7 repair table.

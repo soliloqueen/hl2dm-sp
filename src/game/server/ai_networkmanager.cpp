@@ -32,6 +32,26 @@
 // Increment this to force rebuilding of all networks
 #define	 AINET_VERSION_NUMBER	37
 
+// The shipped-graph checks below key on the retail game dirs; map this mod's folders onto them.
+static void GetShippedGameDir( char *pszOut, int nOutSize )
+{
+	char szPath[MAX_PATH];
+	V_strncpy( szPath, CommandLine()->ParmValue( "-game", "hl2" ), sizeof( szPath ) );
+	V_StripTrailingSlash( szPath );
+	V_FileBase( szPath, pszOut, nOutSize );
+	Q_strlower( pszOut );
+
+	static const char *s_ModDirs[][2] = { { "mod_hl2", "hl2" }, { "mod_ep1", "episodic" }, { "mod_ep2", "ep2" }, { "mod_lostcoast", "lostcoast" } };
+	for ( int i = 0; i < ARRAYSIZE( s_ModDirs ); ++i )
+	{
+		if ( !V_stricmp( pszOut, s_ModDirs[i][0] ) )
+		{
+			V_strncpy( pszOut, s_ModDirs[i][1], nOutSize );
+			return;
+		}
+	}
+}
+
 //-----------------------------------------------------------------------------
 
 int g_DebugConnectNode1 = -1;
@@ -566,10 +586,8 @@ void CAI_NetworkManager::LoadNetworkGraph( void )
 	{
 		bool bOK = false;
 		
-		const char *pGameDir = CommandLine()->ParmValue( "-game", "hl2" );		
 		char szLoweredGameDir[256];
-		Q_strncpy( szLoweredGameDir, pGameDir, sizeof( szLoweredGameDir ) );
-		Q_strlower( szLoweredGameDir );
+		GetShippedGameDir( szLoweredGameDir, sizeof( szLoweredGameDir ) );
 
 		// hack for shipped ep1 and hl2 maps
 		// they were rebuilt a week after they were actually shipped so allow the slightly
@@ -978,10 +996,8 @@ bool CAI_NetworkManager::IsAIFileCurrent ( const char *szMapName )
 	}
 	
 	{
-		const char *pGameDir = CommandLine()->ParmValue( "-game", "hl2" );		
 		char szLoweredGameDir[256];
-		Q_strncpy( szLoweredGameDir, pGameDir, sizeof( szLoweredGameDir ) );
-		Q_strlower( szLoweredGameDir );
+		GetShippedGameDir( szLoweredGameDir, sizeof( szLoweredGameDir ) );
 		
 		if ( !V_stricmp( szLoweredGameDir, "hl2" ) || !V_stricmp( szLoweredGameDir, "episodic" ) || !V_stricmp( szLoweredGameDir, "ep2" ) || !V_stricmp( szLoweredGameDir, "portal" ) || !V_stricmp( szLoweredGameDir, "lostcoast" )  || !V_stricmp( szLoweredGameDir, "hl1" ) )
 		{
