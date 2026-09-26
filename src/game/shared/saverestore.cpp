@@ -393,6 +393,14 @@ void CSave::WriteShort( const short *value, int count )
 
 void CSave::WriteInt( const int *value, int count )
 {
+	// vphysics writes pointers through here; save them as ids.
+	int nId;
+	if ( count == 1 && PhysicsSaveRestoreRemapIntWrite( value, &nId ) )
+	{
+		BufferData( (const char *)&nId, sizeof(int) );
+		return;
+	}
+
 	BufferData( (const char *)value, sizeof(int) * count );
 }
 
@@ -798,7 +806,8 @@ bool CSave::WriteBasicField( const char *pname, void *pData, datamap_t *pRootMap
 				((char *)pData) - pField->fieldOffset[ TD_OFFSET_NORMAL ],
 				pField
 			};
-			pField->pSaveRestoreOps->Save( fieldInfo, this );
+			// Calls ops->Save(), with vphysics pointer fields saved as ids.
+			PhysicsSaveRestoreSaveCustomField( fieldInfo, this );
 			
 			EndBlock();
 			break;
@@ -1021,7 +1030,7 @@ void CSave::WriteTime( const char *pname, const float *data, int count )
 	{
 		// Always encode time as a delta from the current time so it can be re-based if loaded in a new level
 		// Times of 0 are never written to the file, so they will be restored as 0, not a relative time
-		Assert( data[i] != ZERO_TIME );
+		AssertMsg2( data[i] != ZERO_TIME, "Time field '%s' [%d] already holds ZERO_TIME (was it restored without ReadTime?)\n", pname, i );
 
 		if ( data[i] == 0.0 )
 		{
@@ -1474,7 +1483,8 @@ void CRestore::ReadBasicField( const SaveRestoreRecordHeader_t &header, void *pD
 				pField
 			};
 			
-			pField->pSaveRestoreOps->Restore( fieldInfo, this );
+			// Calls ops->Restore(), with vphysics pointer fields restored from ids.
+			PhysicsSaveRestoreRestoreCustomField( fieldInfo, this, header.size );
 			
 			Assert( posNextField >= GetReadPos() );
 			SetReadPos( posNextField );
@@ -1796,11 +1806,10 @@ int CRestore::ReadInt( int *pValue, int nElems, int nBytesAvailable )
 {
 	int nRead = ReadSimple( pValue, nElems, nBytesAvailable );
 
-	// Let the physics manager put the upper half of a truncated x64 pointer back:
-	// vphysics reads the pointers it saved through this call.
+	// vphysics reads pointer ids through here into 8 byte slots.
 	if ( nRead > 0 )
 	{
-		PhysicsSaveRestoreRepairIntRead( pValue, nRead );
+		PhysicsSaveRestoreFixupIntRead( pValue, nRead );
 	}
 
 	return nRead;

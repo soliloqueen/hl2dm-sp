@@ -437,6 +437,7 @@ C_BasePlayer::C_BasePlayer() : m_iv_vecViewOffset( "C_BasePlayer::m_iv_vecViewOf
 	m_flPredictionErrorTime = -100;
 	m_StuckLast = 0;
 	m_bWasFrozen = false;
+	m_bLevelTransition = false;
 
 	m_bResampleWaterSurface = true;
 	

@@ -47,9 +47,18 @@ public:
 
 extern IPhysSaveRestoreManager *g_pPhysSaveRestoreManager;
 
-// Called by CRestore::ReadInt() for every int read from the stream; the physics
-// block handler puts the saved upper half back on vphysics's truncated x64 pointers.
-bool PhysicsSaveRestoreRepairIntRead( int *pValue, int nElems );
+// x64 vphysics pointer id hooks (see physics_saverestore.cpp).
+struct SaveRestoreFieldInfo_t;
+class ISave;
+class IRestore;
+
+// CSave::WriteInt: true if *pValue is a pointer, with its id in *pOut.
+bool PhysicsSaveRestoreRemapIntWrite( const int *pValue, int *pOut );
+// CRestore::ReadInt: zero extends a pointer id vphysics just read.
+void PhysicsSaveRestoreFixupIntRead( int *pValue, int nElems );
+// FIELD_CUSTOM save/restore; nBytes is the saved size of the field.
+void PhysicsSaveRestoreSaveCustomField( const SaveRestoreFieldInfo_t &fieldInfo, ISave *pSave );
+void PhysicsSaveRestoreRestoreCustomField( const SaveRestoreFieldInfo_t &fieldInfo, IRestore *pRestore, int nBytes );
 
 //=============================================================================
 

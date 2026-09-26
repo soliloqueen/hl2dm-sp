@@ -6,6 +6,7 @@
 //===========================================================================//
 #include "cbase.h"
 #include <crtmemdebug.h>
+#include "soundstartparams.h"
 #include "vgui_int.h"
 #include "clientmode.h"
 #include "iinput.h"
@@ -2605,6 +2606,27 @@ void CHLClient::ClientAdjustStartSoundParams( StartSoundParams_t& params )
 	if ( ( params.entchannel == CHAN_VOICE ) && pEntity && pEntity->IsPlayer() )
 	{
 		pEntity->ClientAdjustStartSoundParams( params );
+	}
+#else
+	// The engine frees a channel when the next sound on the same entity/channel starts, cutting off
+	// layered scene sounds on the player. Give each delayed player voice sound its own channel.
+	if ( gpGlobals->maxClients == 1 && params.fromserver && params.entchannel == CHAN_VOICE &&
+		 params.pSfx && params.soundsource == engine->GetLocalPlayer() )
+	{
+		static CUtlRBTree< const CSfxTable * > s_LayeredSounds( 0, 0, DefLessFunc( const CSfxTable * ) );
+
+		bool bStart = !( params.flags & ( SND_STOP | SND_CHANGE_VOL | SND_CHANGE_PITCH ) );
+		if ( bStart && ( params.flags & SND_DELAY ) )
+		{
+			s_LayeredSounds.InsertIfNotFound( params.pSfx );
+		}
+
+		if ( s_LayeredSounds.Find( params.pSfx ) != s_LayeredSounds.InvalidIndex() &&
+			 ( !bStart || ( params.flags & SND_DELAY ) ) )
+		{
+			unsigned int nHash = (unsigned int)( ( (uint64)(uintp)params.pSfx * 0x9E3779B97F4A7C15ull ) >> 54 );	// 10 bits
+			params.entchannel = CHAN_USER_BASE + (int)nHash;
+		}
 	}
 #endif // TF_CLIENT_DLL
 }
